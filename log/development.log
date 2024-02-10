@@ -5063,3 +5063,16 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 56882)
 
 
+Started GET "/" for 192.168.65.1 at 2024-02-10 05:34:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 590.6ms | Allocations: 43542)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 492)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 612.9ms | Allocations: 67290)
+Completed 200 OK in 631ms (Views: 621.3ms | ActiveRecord: 0.0ms | Allocations: 70974)
+
+
