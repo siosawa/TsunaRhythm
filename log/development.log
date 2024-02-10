@@ -5163,3 +5163,53 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 292ms (Views: 285.9ms | ActiveRecord: 0.0ms | Allocations: 333723)
 
 
+Started GET "/login" for 192.168.65.1 at 2024-02-10 06:40:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 182.0ms | Allocations: 277810)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 507)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 293.8ms | Allocations: 330503)
+Completed 200 OK in 302ms (Views: 296.2ms | ActiveRecord: 0.0ms | Allocations: 333522)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-02-10 06:53:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 988)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 8206)
+Completed 200 OK in 26ms (Views: 22.5ms | Allocations: 8473)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-02-10 06:59:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 183.7ms | Allocations: 277880)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 507)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 290.3ms | Allocations: 330703)
+Completed 200 OK in 298ms (Views: 292.7ms | ActiveRecord: 0.0ms | Allocations: 333722)
+
+
+Started GET "/login" for 192.168.65.1 at 2024-02-10 06:59:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 991)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 105)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 8333)
+Completed 200 OK in 15ms (Views: 13.4ms | Allocations: 8600)
+
+
