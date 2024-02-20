@@ -27,3 +27,4 @@ $ docker container run -it -p 3000:3000 --name tsunarhythm -v "${PWD}:/app" tsun
 $ rails db:seed
 ```
 test
+test2
