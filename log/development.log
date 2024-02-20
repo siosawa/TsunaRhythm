@@ -8237,3 +8237,41 @@ Processing by StaticPagesController#roomlist as HTML
 Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.5ms | Allocations: 9679)
 
 
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-20 18:00:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 0.7ms | Allocations: 318)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 19.8ms | Allocations: 15649)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 136.8ms | Allocations: 68869)
+Completed 200 OK in 143ms (Views: 136.5ms | ActiveRecord: 2.8ms | Allocations: 71222)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-20 19:26:31 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 0.8ms | Allocations: 318)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 17.2ms | Allocations: 15633)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 169.6ms | Allocations: 68856)
+Completed 200 OK in 175ms (Views: 168.7ms | ActiveRecord: 3.4ms | Allocations: 71209)
+
+
