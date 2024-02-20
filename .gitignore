@@ -1,5 +1,3 @@
-tmp/cache/assets/sprockets/v4.0.0/mW/mwNx6r0Gq9UyenzmAxTxDLe2Wk6i7dNj3hh-asrHZJc.cache
-tmp/cache/bootsnap/compile-cache-iseq
-db/mysql/volumes
 /config/master.key
+/tmp/*
 
