@@ -16,6 +16,7 @@ services:
       - "3306:3306"
 
   web:
+    platform: linux/x86_64
     build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
