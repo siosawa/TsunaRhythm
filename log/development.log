@@ -8275,3 +8275,328 @@ Processing by StaticPagesController#roomlist as HTML
 Completed 200 OK in 175ms (Views: 168.7ms | ActiveRecord: 3.4ms | Allocations: 71209)
 
 
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-21 11:21:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 0.8ms | Allocations: 318)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 22.7ms | Allocations: 15659)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 153.0ms | Allocations: 68802)
+Completed 200 OK in 158ms (Views: 151.8ms | ActiveRecord: 3.5ms | Allocations: 71155)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-22 18:51:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 1.1ms | Allocations: 318)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 20.7ms | Allocations: 15633)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 248.7ms | Allocations: 68859)
+Completed 200 OK in 264ms (Views: 246.3ms | ActiveRecord: 5.3ms | Allocations: 71212)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-23 00:39:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 1.1ms | Allocations: 318)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 19.7ms | Allocations: 15633)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 230.3ms | Allocations: 68859)
+Completed 200 OK in 238ms (Views: 229.7ms | ActiveRecord: 3.7ms | Allocations: 71212)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-23 17:13:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 1.1ms | Allocations: 318)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 16.5ms | Allocations: 15633)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 190.9ms | Allocations: 68657)
+Completed 200 OK in 198ms (Views: 190.8ms | ActiveRecord: 2.9ms | Allocations: 71010)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-23 22:28:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 5.5ms | Allocations: 462)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 32.1ms | Allocations: 16570)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 768.8ms | Allocations: 83222)
+Completed 200 OK in 793ms (Views: 773.3ms | ActiveRecord: 5.7ms | Allocations: 86904)
+
+
+Started GET "/dashboard" for 192.168.65.1 at 2024-02-23 22:28:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/dashboard.html.erb within layouts/application
+  Rendered static_pages/dashboard.html.erb within layouts/application (Duration: 2.5ms | Allocations: 110)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 1827)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 9397)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.5ms | Allocations: 9665)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-23 22:28:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | Allocations: 1826)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 9169)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.8ms | Allocations: 9436)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-23 22:28:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1091)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 1738)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 9934)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.4ms | Allocations: 10201)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-23 22:48:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 30.6ms | Allocations: 15721)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 2267)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 761.5ms | Allocations: 84677)
+Completed 200 OK in 781ms (Views: 764.9ms | ActiveRecord: 5.6ms | Allocations: 88359)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-23 22:48:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 1.1ms | Allocations: 116)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 20.4ms | Allocations: 1827)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 9418)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 0.9ms | Allocations: 9686)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-24 00:00:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 36.3ms | Allocations: 15723)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 2267)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 710.4ms | Allocations: 84965)
+Completed 200 OK in 728ms (Views: 704.9ms | ActiveRecord: 13.3ms | Allocations: 88647)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-24 00:01:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 788)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.3ms | Allocations: 1738)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 9743)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.9ms | Allocations: 10009)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-24 00:02:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 784)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 1738)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9627)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 9892)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-24 00:02:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 1826)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 9294)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 9561)
+
+
+Started GET "/dashboard" for 192.168.65.1 at 2024-02-24 00:02:04 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/dashboard.html.erb within layouts/application
+  Rendered static_pages/dashboard.html.erb within layouts/application (Duration: 1.1ms | Allocations: 112)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 1826)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 9536)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.6ms | Allocations: 9805)
+
+
+Started GET "/roomlist" for 192.168.65.1 at 2024-02-24 00:02:05 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#roomlist as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/roomlist.html.erb within layouts/application
+  Rendered static_pages/roomlist.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 1819)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 9389)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.7ms | Allocations: 9657)
+
+
+Started GET "/" for 192.168.65.1 at 2024-02-24 00:02:05 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 804)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:22:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | Allocations: 1738)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 9645)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.6ms | Allocations: 9911)
+
+
