@@ -8,3 +8,12 @@ RUN bundle install
 COPY . /app
 CMD ["/bin/bash"]
 
+# docker system prune -a
+# docker image build -t tsunarhythm:v1 .
+# docker container run -it -p 3000:3000 --name tsunarhythm -v "${PWD}:/app" tsunarhythm:v1
+# rails db:seed
+# rails s -d -b 0.0.0.0
+# http://0.0.0.0:3000/ へアクセス
+
+# docker-compose build
+# docker-compose up
