@@ -10,8 +10,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: mydb #教材の関係でここを追加
-      MYSQL_USER: myuser　#教材の関係でここを追加
-      MYSQL_PASSWORD: mypassword　#教材の関係でここを追加
+      MYSQL_USER: myuser #教材の関係でここを追加
+      MYSQL_PASSWORD: mypassword #教材の関係でここを追加
     ports:
       - "3306:3306"
 

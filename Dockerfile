@@ -8,14 +8,25 @@ RUN bundle install
 COPY . /app
 CMD ["/bin/bash"]
 
-# docker起動手順
+# dockerコマンドによる起動手順
 # docker system prune -a
-# docker image build -t tsunarhythm:v1 .
-# docker container run -it -p 3000:3000 --name tsunarhythm -v "${PWD}:/app" tsunarhythm:v1
+# docker build -t tsunarhythm:v1 .
+# docker network create my_app_network
+# docker run -d --name db --network my_app_network -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 mysql:8.0.36
+# docker run -d --name web --network my_app_network -p 3000:3000 -v $(pwd):/app tsunarhythm:v1 bundle exec rails s -p 3000 -b '0.0.0.0'
+# docker exec -it web /bin/bash
+# rails db:create
+# rails db:migrate
 # rails db:seed
-# rails s -d -b 0.0.0.0
 # http://0.0.0.0:3000/ へアクセス
 
-# docker-composeの起動手順
+# docker停止手順
+# docker ps でコンテナIDを確認
+# docker stop webID でコンテナを停止
+# docker stop MySQLID でMySQLを停止
+
+# docker-composeコマンドによる起動手順
 # docker-compose build
-# docker-compose up
+# docker-compose up -d
+# docker-compose down
+
