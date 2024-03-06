@@ -17,8 +17,7 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  socket: <%= ENV['DB_SOCKET'] %>
-  host: <%= ENV['DB_HOST'] %>
+  database: <%= ENV['MYSQL_NAME'] %>
+  username: myuser
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: <%= ENV['MYSQL_HOST'] %>
