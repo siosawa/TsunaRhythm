@@ -24,11 +24,13 @@ CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
 # docker ps でコンテナIDを確認
 # docker stop webID でコンテナを停止
 # docker stop MySQLID でMySQLを停止
+# docker system prune -a でイメージとコンテナを削除
 
 # docker-composeコマンドによる起動手順
 # docker-compose build
 # docker-compose up -d
 # docker-compose down
+# http://localhost:3000/ へアクセス
 
 # ECRへのpush手順
 # docker build --platform linux/amd64 -t 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1 . 
