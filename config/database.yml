@@ -3,17 +3,16 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: password
+  password: "password"
   host: db
-
 
 development:
   <<: *default
-  database: tsunarhythm_development
+  database: app_development
 
 test:
   <<: *default
-  database: tsunarhythm_test
+  database: app_test
 
 production:
   <<: *default

@@ -5,10 +5,9 @@ set -e
 rm -f /tmp/pids/server.pid
 
 # データベースのセットアップ
-bundle exec rails db:reset
-bundle exec rails db:create
-bundle exec rails db:migrate
-bundle exec rails db:seed
+bundle exec rails db:create --trace
+bundle exec rails db:migrate --trace
+bundle exec rails db:seed --trace
 
 # コマンドライン引数で指定されたコマンドを実行
 exec "$@"

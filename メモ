@@ -1,3 +1,6 @@
-ルート証明書の信頼設定を変更するには、キーチェーンアクセスで証明書を開き、
-“信頼設定”で変更します。新しいルート証明書は現在のユーザのログインキーチェーンに追加されます。
-このマシンのすべてのユーザによって証明書が共有される場合は、システムキーチェーンに追加されます。
+<db/migrate/20231109230059_add_index_to_users_emails.rb>
+# class AddIndexToUsersEmails < ActiveRecord::Migration[7.0]
+#   def change
+#     add_index :users, :email, unique: true
+#   end
+# end
