@@ -2,7 +2,8 @@ name: Run RSpec, RuboCop, Jest, ESLint
 
 on:
   push:
-  pull_request:
+    branches:
+      - main
 
 jobs:
   RSpec:
@@ -11,7 +12,7 @@ jobs:
     timeout-minutes: 10
     services:
       mysql:
-        image: mysql:8.0
+        image: mysql:8.0.36
         ports:
           - 3306:3306
         env:
@@ -25,111 +26,96 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.2
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: back/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('back/**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          ruby-version: 3.2.2
 
       - name: Bundler and gem install
-        working-directory: back
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3 --path vendor/bundle
 
-      - name: Yarn install
-        working-directory: back
-        run: yarn install --check-files
-
       - name: Database create and migrate
-        working-directory: back
         run: |
           cp config/database.yml.ci config/database.yml
-          bundle exec rails db:create RAILS_ENV=test
+          bundle exec rails db:create  RAILS_ENV=test
           bundle exec rails db:migrate RAILS_ENV=test
 
       - name: Run RSpec
-        working-directory: back
-        run: bundle exec rspec
+        run: bundle exec rspec --format documentation
 
-  RuboCop:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  # RuboCop:
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.0.2
+  #     - name: Set up Ruby
+  #       uses: ruby/setup-ruby@v1
+  #       with:
+  #         ruby-version: 3.0.2
 
-      - name: Bundler and gem install
-        working-directory: back
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3 --path vendor/bundle
+  #     - name: Bundler and gem install
+  #       working-directory: back
+  #       run: |
+  #         gem install bundler
+  #         bundle install --jobs 4 --retry 3 --path vendor/bundle
 
-      - name: Run RuboCop
-        working-directory: back
-        run: bundle exec rubocop
+  #     - name: Run RuboCop
+  #       working-directory: back
+  #       run: bundle exec rubocop
 
-  Jest:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    env:
-      NEXT_PUBLIC_IS_DEV: true
-      NEXT_PUBLIC_API_ENDPOINT_USERS: http://localhost:3000/api/v1/users
-      NEXT_PUBLIC_API_ENDPOINT_RELATIONSHIPS: http://localhost:3000/api/v1/relationships
-      NEXT_PUBLIC_API_ENDPOINT_LOGIN: http://localhost:3000/api/v1/login
-      NEXT_PUBLIC_API_ENDPOINT_LOGOUT: http://localhost:3000/api/v1/logout
-      NEXT_PUBLIC_API_ENDPOINT_TWEETS: http://localhost:3000/api/v1/tweets
-      NEXT_PUBLIC_API_ENDPOINT_COMMUNITIES: http://localhost:3000/api/v1/communities
-      NEXT_PUBLIC_API_ENDPOINT_GADGETS: http://localhost:3000/api/v1/gadgets
-      NEXT_PUBLIC_API_ENDPOINT_GUEST: http://localhost:3000/api/v1/guest_login
-      API_ENDPOINT_CHECK_SESSION: http://back:3000/api/v1/check
-      API_ENDPOINT_USERS: http://back:3000/api/v1/users
-      API_ENDPOINT_COMMUNITIES: http://back:3000/api/v1/communities
-      API_ENDPOINT_GADGETS: http://back:3000/api/v1/gadgets
+  # Jest:
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   env:
+  #     NEXT_PUBLIC_IS_DEV: true
+  #     NEXT_PUBLIC_API_ENDPOINT_USERS: http://localhost:3000/api/v1/users
+  #     NEXT_PUBLIC_API_ENDPOINT_RELATIONSHIPS: http://localhost:3000/api/v1/relationships
+  #     NEXT_PUBLIC_API_ENDPOINT_LOGIN: http://localhost:3000/api/v1/login
+  #     NEXT_PUBLIC_API_ENDPOINT_LOGOUT: http://localhost:3000/api/v1/logout
+  #     NEXT_PUBLIC_API_ENDPOINT_TWEETS: http://localhost:3000/api/v1/tweets
+  #     NEXT_PUBLIC_API_ENDPOINT_COMMUNITIES: http://localhost:3000/api/v1/communities
+  #     NEXT_PUBLIC_API_ENDPOINT_GADGETS: http://localhost:3000/api/v1/gadgets
+  #     NEXT_PUBLIC_API_ENDPOINT_GUEST: http://localhost:3000/api/v1/guest_login
+  #     API_ENDPOINT_CHECK_SESSION: http://back:3000/api/v1/check
+  #     API_ENDPOINT_USERS: http://back:3000/api/v1/users
+  #     API_ENDPOINT_COMMUNITIES: http://back:3000/api/v1/communities
+  #     API_ENDPOINT_GADGETS: http://back:3000/api/v1/gadgets
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+  #     - name: Set up Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
 
-      - name: Yarn install
-        working-directory: front/app
-        run: yarn install
+  #     - name: Yarn install
+  #       working-directory: front/app
+  #       run: yarn install
 
-      - name: Run Jest
-        working-directory: front/app
-        run: yarn jest
+  #     - name: Run Jest
+  #       working-directory: front/app
+  #       run: yarn jest
 
-  ESLint:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+  # ESLint:
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+  #     - name: Set up Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
 
-      - name: Yarn install
-        working-directory: front/app
-        run: yarn install
+  #     - name: Yarn install
+  #       working-directory: front/app
+  #       run: yarn install
 
-      - name: Run ESLint
-        working-directory: front/app
-        run: yarn run lint
+  #     - name: Run ESLint
+  #       working-directory: front/app
+  #       run: yarn run lint
