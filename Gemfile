@@ -28,7 +28,10 @@ end
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 6.1.0'
+  gem 'spring-commands-rspec'
 end
+
 
 group :development do
   gem "web-console", "4.2.0"
