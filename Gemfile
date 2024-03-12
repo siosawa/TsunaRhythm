@@ -28,6 +28,7 @@ end
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
