@@ -1,5 +1,8 @@
 FROM ruby:3.2.2
-RUN apt-get update -qq && apt-get install -y nodejs default-libmysqlclient-dev
+RUN apt-get update -qq && apt-get install -y nodejs default-libmysqlclient-dev && \
+    apt-get install -y tzdata && \
+    rm -rf /var/lib/apt/lists/*
+COPY ./tz.sql /docker-entrypoint-initdb.d/
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
@@ -18,7 +21,7 @@ CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
 # docker network create my_app_network
 # docker run -d --name db --network my_app_network -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 mysql:8.0.36
 # docker run -d --name web --network my_app_network -p 3000:3000 -v $(pwd):/app tsunarhythm:v1 bundle exec rails s -p 3000 -b '0.0.0.0'
-# http://0.0.0.0:3000/ へアクセス
+# http://0.0.0.0:3000/ へアクセス または http://localhost:3000/ へアクセス
 
 # docker停止手順
 # docker ps でコンテナIDを確認
