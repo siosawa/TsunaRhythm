@@ -1,1 +1,0 @@
-SET @@session.time_zone = 'SYSTEM';
