@@ -1,9 +1,17 @@
 # dockerコマンドによる起動手順
 ```
 docker system prune -a
+```
+```
 docker build -t tsunarhythm:v1 .
+```
+```
 docker network create my_app_network
+```
+```
 docker run -d --name db --network my_app_network -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 mysql:8.0.36
+```
+```
 docker run -d --name web --network my_app_network -p 3000:3000 -v $(pwd):/app tsunarhythm:v1 bundle exec rails s -p 3000 -b '0.0.0.0'
 ```
 http://0.0.0.0:3000/ へアクセス または http://localhost:3000/ へアクセス
@@ -11,8 +19,14 @@ http://0.0.0.0:3000/ へアクセス または http://localhost:3000/ へアク�
 # docker停止手順
 ```
 docker ps でコンテナIDを確認
+```
+```
 docker stop webID でコンテナを停止
+```
+```
 docker stop MySQLID でMySQLを停止
+```
+```
 docker system prune -a でイメージとコンテナを削除
 ```
 
