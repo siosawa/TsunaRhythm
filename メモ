@@ -12,7 +12,7 @@ rails db:migrate RAILS_ENV=test
 git switch -c feature/add_test
 
 わかりやすいコミットメッセージの書き方
-機能: 何を追加したか
+追加: 何を追加したか
 修正: 何を修正したか
 リファクタリング: 何をリファクタリングしたか
 テスト: 何をテストしたか
