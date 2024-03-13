@@ -20,7 +20,9 @@ docker system prune -a でイメージとコンテナを削除
 ```
 docker-compose build
 docker-compose up -d
+```
 http://localhost:3000/ へアクセス
+```
 docker-compose down
 ```
 
