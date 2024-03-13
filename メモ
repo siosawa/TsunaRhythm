@@ -1,9 +1,11 @@
-; # テストの実行
-; bundle exec rspec
-; # テストの実行で中身も確認
-; bundle exec rspec --format documentation
-; # テスト環境雨のDBのマイグレーション
-; rails db:migrate RAILS_ENV=test
+# テストの実行
+bundle exec rspec
+# テストの実行で中身も確認
+bundle exec rspec --format documentation
+# テスト環境毎のDBのマイグレーション
+rails db:migrate RAILS_ENV=test
 
-; テストする対象は、モデル、コントローラ、ビュー、ルーティングがあげられる。
-; テストする対象が決まったらテストする項目をまず書きコードは書かない。
+テストする対象は、モデル、コントローラ、ビュー、ルーティングがあげられる。
+テストする対象が決まったらテストする項目をまず書きコードは書かない。
+
+git switch -c feature/add_test
