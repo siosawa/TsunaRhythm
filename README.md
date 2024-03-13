@@ -57,11 +57,11 @@ docker push 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1
 ```
 bundle exec rspec
 ```
-## テストの実行で中身も確認
+### テストの実行で中身も確認
 ```
 bundle exec rspec --format documentation
 ```
-## テスト環境毎のDBのマイグレーション
+### テスト環境毎のDBのマイグレーション
 ```
 rails db:migrate RAILS_ENV=test
 ```
@@ -69,20 +69,20 @@ rails db:migrate RAILS_ENV=test
 ```
 git switch -c add_test
 ```
-## ブランチを切り替え
+### ブランチを切り替え
 ```
 git switch add_test
 ```
 # わかりやすいコミットメッセージの書き方の例
-追加: ユーザー新規登録機
+1. 追加: ユーザー新規登録機
 
-修正: 何を修正したか
+2. 修正: 何を修正したか
 
-リファクタリング: 何をリファクタリングしたか
+3. リファクタリング: 何をリファクタリングしたか
 
-テスト: 何をテストしたか
+4. テスト: 何をテストしたか
 
-その他: その他
+5. その他: その他
 
 # gitリポジトリとの紐付けを削除しつつローカルファイルを残す
 ※ gitignoreファイルへのファイルパス、ディレクトリパスの追加を忘れずに。
@@ -92,6 +92,3 @@ git rm --cached ファイルパス
 ```
 git rm --cached -r  ディレクトリパス/
 ```
-
-1. aaa
-# 1. aaa
