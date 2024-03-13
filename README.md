@@ -19,6 +19,8 @@ docker system prune -a でイメージとコンテナを削除
 # docker-composeコマンドによる起動手順
 ```
 docker-compose build
+```
+```
 docker-compose up -d
 ```
 http://localhost:3000/ へアクセス
@@ -29,7 +31,11 @@ docker-compose down
 # ECRへのpush手順
 ```
 docker build --platform linux/amd64 -t 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1 . 
+```
+```
 aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com
+```
+```
 docker push 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1
 ```
 
@@ -68,5 +74,7 @@ git switch add_test
 ※ gitignoreファイルへのファイルパス、ディレクトリパスの追加を忘れずに。
 ```
 git rm --cached ファイルパス
+```
+```
 git rm --cached -r  ディレクトリパス/
 ```
