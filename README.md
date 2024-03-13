@@ -92,3 +92,6 @@ git rm --cached ファイルパス
 ```
 git rm --cached -r  ディレクトリパス/
 ```
+
+1. aaa
+# 1. aaa
