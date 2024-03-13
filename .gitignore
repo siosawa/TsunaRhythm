@@ -1,1 +1,3 @@
 config/master.key
+db/mysql/volumes/
+tmp/cache/bootsnap/
