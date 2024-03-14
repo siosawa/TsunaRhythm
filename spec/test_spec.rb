@@ -4,3 +4,4 @@ RSpec.describe 'RSpecのテスト' do
     expect(true).to eq(true)
   end
 end
+
