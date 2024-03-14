@@ -29,6 +29,13 @@ RSpec.describe "StaticPages", type: :request do
       expect(response).to redirect_to(login_url)
     end
 
+    it "ログインしていない状態でポストを作成しようとするとログインURLにアクセスする" do
+      expect {
+        post microposts_path, params: { micropost: { content: "おはよう" } }
+      }.to_not change(Micropost, :count)
+      expect(response).to redirect_to(login_url)
+    end
+
     # it "ログインしていない状態でユーザーをフォロー解除するとログインURLにアクセスする" do
     #   expect {
     #     delete relationships_path
@@ -47,3 +54,8 @@ RSpec.describe "StaticPages", type: :request do
     # end
   end
 end
+
+# 置き換える残りのファイル
+# microposts_controller_test.rb
+# users_controller_test
+# relationships_controller_test.rb
