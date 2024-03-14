@@ -5724,3 +5724,204 @@ Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 22:31:28 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1168)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5463)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 7773)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 22:31:28 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 312.3ms | Allocations: 276772)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 313.9ms | Allocations: 277911)
+Completed 200 OK in 316ms (Views: 315.0ms | ActiveRecord: 0.0ms | Allocations: 278512)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 22:31:29 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 2119)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2373)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3517)
+Completed 200 OK in 22ms (Views: 7.4ms | ActiveRecord: 2.8ms | Allocations: 14384)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 22:31:29 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 22:31:29 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 22:31:29 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (95.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `app_test`[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_attachments` CASCADE[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, INDEX `index_active_storage_attachments_on_blob_id` (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness` (`record_type`, `record_id`, `name`, `blob_id`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_blobs` CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `service_name` varchar(255) NOT NULL, `byte_size` bigint NOT NULL, `checksum` varchar(255), `created_at` datetime(6) NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key` (`key`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_variant_records` CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `active_storage_variant_records` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `blob_id` bigint NOT NULL, `variation_digest` varchar(255) NOT NULL, UNIQUE INDEX `index_active_storage_variant_records_uniqueness` (`blob_id`, `variation_digest`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `microposts` CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE `microposts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `content` text NOT NULL, `user_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_microposts_on_user_id_and_created_at` (`user_id`, `created_at`), INDEX `index_microposts_on_user_id` (`user_id`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `relationships` CASCADE[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE `relationships` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `follower_id` int, `followed_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_relationships_on_followed_id` (`followed_id`), UNIQUE INDEX `index_relationships_on_follower_id_and_followed_id` (`follower_id`, `followed_id`), INDEX `index_relationships_on_follower_id` (`follower_id`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, `password_digest` varchar(255), `remember_digest` varchar(255), `admin` tinyint(1) DEFAULT FALSE, `activation_digest` varchar(255), `activated` tinyint(1) DEFAULT FALSE, `activated_at` datetime(6), `reset_digest` varchar(255), `reset_sent_at` datetime(6), UNIQUE INDEX `index_users_on_email` (`email`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (34.4ms)[0m  [1m[35mALTER TABLE `active_storage_attachments` ADD CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+[0m
+  [1m[35m (17.4ms)[0m  [1m[35mALTER TABLE `active_storage_variant_records` ADD CONSTRAINT `fk_rails_993965df05`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+[0m
+  [1m[35m (17.3ms)[0m  [1m[35mALTER TABLE `microposts` ADD CONSTRAINT `fk_rails_558c81314b`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20231129142850)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20231109205017),
+(20231109230059),
+(20231111210821),
+(20231116070536),
+(20231117102816),
+(20231120084304),
+(20231122052851),
+(20231125090737),
+(20231128120208);
+
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'test', '2024-03-14 22:33:42.552655', '2024-03-14 22:33:42.552655')[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', 'a7c0270ac9fdd8edf38e3884726b67ea94b3def0', '2024-03-14 22:33:42.562699', '2024-03-14 22:33:42.562699')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 22:33:42 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1168)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5463)
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 7773)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 22:33:42 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 365.1ms | Allocations: 276773)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 366.6ms | Allocations: 277912)
+Completed 200 OK in 369ms (Views: 367.7ms | ActiveRecord: 0.0ms | Allocations: 278513)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 22:33:43 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 233)
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 2120)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2374)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3518)
+Completed 200 OK in 22ms (Views: 7.5ms | ActiveRecord: 3.1ms | Allocations: 14385)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 22:33:43 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 22:33:43 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 22:33:43 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
