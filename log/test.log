@@ -5925,3 +5925,412 @@ Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 22:34:48 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1168)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5463)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 7773)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 22:34:48 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 263.2ms | Allocations: 276772)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 189)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 264.7ms | Allocations: 277911)
+Completed 200 OK in 267ms (Views: 265.7ms | ActiveRecord: 0.0ms | Allocations: 278512)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 22:34:48 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 2119)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2373)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3517)
+Completed 200 OK in 20ms (Views: 6.6ms | ActiveRecord: 2.8ms | Allocations: 14384)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 22:34:48 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 22:34:48 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 22:34:48 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 22:37:53 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1168)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5461)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 7772)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 22:37:53 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1782)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2919)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 3520)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 22:37:53 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 2041)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2290)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3433)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 1.8ms | Allocations: 10369)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 22:37:53 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 22:37:53 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 22:37:53 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:08:27 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1169)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5463)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 7771)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:08:27 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 284.4ms | Allocations: 276877)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 286.1ms | Allocations: 278016)
+Completed 200 OK in 289ms (Views: 287.4ms | ActiveRecord: 0.0ms | Allocations: 278616)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:08:27 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 2119)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2373)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3517)
+Completed 200 OK in 24ms (Views: 7.5ms | ActiveRecord: 3.2ms | Allocations: 15096)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:08:27 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:08:27 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:08:27 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'rachal.turcotte@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Vern Wilkinson', 'rachal.turcotte@yahoo.com', '2024-03-14 23:09:08.653939', '2024-03-14 23:09:08.653939', '$2a$04$a6hM1yEXyIt5N48rTxsw4eyUkUUWM.aVJ8pQ6P73W1LxCH0u.t25u', NULL, FALSE, '$2a$04$ljUbO.qKMIaF0wqx87bgreVtFgoFK2cze0AWH.4HJPHc.bLo3yR2u', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Praesentium aut cum. Quis temporibus est. Qui odit aliquam. A sit ab. Dolorem ut magnam. Blanditiis.', 1, '2024-03-14 23:09:08.673513', '2024-03-14 23:09:08.673513')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'erik_altenwerth@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Miss Heriberto Cormier', 'erik_altenwerth@hotmail.com', '2024-03-14 23:09:08.694035', '2024-03-14 23:09:08.694035', '$2a$04$UTqUQ10xJMvy6D30/OdhQOZOxp/jZU57/MK/HRZl/kT1kiU5OgoLi', NULL, FALSE, '$2a$04$PgclnYmZwwEaMx2H.qxiqeur9dzETPm2dzCRSA5x11tngouTryD8K', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Totam sequi voluptas. Autem corporis dolores. Quo totam a. In et quam. Reiciendis eos perspiciatis..', 2, '2024-03-14 23:09:08.697915', '2024-03-14 23:09:08.697915')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'danita@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Franklin Dickens', 'danita@gmail.com', '2024-03-14 23:09:08.704195', '2024-03-14 23:09:08.704195', '$2a$04$kwfLzJRm0QPerE6xwAOi4eCd29Ew6X4jqPcmI5ObEM.GZ3NrgrJiy', NULL, FALSE, '$2a$04$fXdOGw8DJsXOeP7TKxpbJeI./39QPUgPY4muymDnp/IxcNnxKitmi', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Id hic omnis. Placeat sit quis. Quis explicabo eius. Suscipit qui perspiciatis. Officia voluptatem .', 3, '2024-03-14 23:09:08.707558', '2024-03-14 23:09:08.707558')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enedina.quitzon@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Mr. Cesar Will', 'enedina.quitzon@hotmail.com', '2024-03-14 23:09:08.714827', '2024-03-14 23:09:08.714827', '$2a$04$2fAInD.iicQ3Vqr5iCHql.GxSI7DDM7dE0lDZ/2I4u.//0.GgzbWW', NULL, FALSE, '$2a$04$6FwUT/CJFsoNfrs2OWarOe0hLlT8sViy1bcpI0PBHdtvlmVOxlMo.', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.3ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Quia dolor unde. Consequatur similique hic. Saepe laboriosam dolorem. Sequi dolorem id. Aut vero si.', 4, '2024-03-14 23:09:08.718468', '2024-03-14 23:09:08.718468')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:09:08 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5459)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:09:08 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2929)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:09:08 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:09:08 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:09:08 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:09:08 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'yung.lakin@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Jerald Breitenberg', 'yung.lakin@hotmail.com', '2024-03-14 23:10:22.328695', '2024-03-14 23:10:22.328695', '$2a$04$rh6shrkrqKAbGtO68MgV/uew1sfP8gDvFlWi97JXqBBVdufz3Dk1W', NULL, FALSE, '$2a$04$JcJXd/waU1wUb0s.CTYk8e.5TGXCF1.PlGRSUIxzZDx6vtOEU09K2', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Veritatis possimus dolorem. Consectetur non voluptas. Incidunt reprehenderit ducimus. Magnam et qui.', 5, '2024-03-14 23:10:22.345298', '2024-03-14 23:10:22.345298')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'glady.batz@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Krysta Beatty', 'glady.batz@hotmail.com', '2024-03-14 23:10:22.364514', '2024-03-14 23:10:22.364514', '$2a$04$DQo1FcTPZkIipLr8Od.XYu6Gb5O30Y.YtTfWo2xOEkubNIup9GE/i', NULL, FALSE, '$2a$04$1M3Bx/alf0Xckogj5LTuNuzo5frvOhSdkS8t0UUIQ6CObA1vpBWOG', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Non quisquam corrupti. Illum rerum quis. Neque maxime accusantium. Animi qui aliquid. Ut minus nisi.', 6, '2024-03-14 23:10:22.368345', '2024-03-14 23:10:22.368345')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'woodrow@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Marco Kshlerin', 'woodrow@gmail.com', '2024-03-14 23:10:22.374494', '2024-03-14 23:10:22.374494', '$2a$04$0GjTkf9WLHK4EAF38yB8Qekp0ckEH2BUCPNWEmPPFQf.xj.4RRIFy', NULL, FALSE, '$2a$04$YSgquleKUZvlQYBSrTAR5.GvewrUuf58Rl2Eov2YKKcSBhHSOIbj6', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ut deserunt omnis. Dolor nam aut. Ratione quia sit. Voluptatibus ex ut. Consequuntur impedit sint. .', 7, '2024-03-14 23:10:22.378215', '2024-03-14 23:10:22.378215')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'marco_erdman@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Ms. Candra Schulist', 'marco_erdman@yahoo.com', '2024-03-14 23:10:22.384497', '2024-03-14 23:10:22.384497', '$2a$04$VfveGRCcHjvMz6tIYlGS.edEgVZ6/iKjIOPJXtZGbYN6QCiRzp/ZG', NULL, FALSE, '$2a$04$vmPt.SuCKHu8C/EHVYqSzeChlnEHwvyrVVLKChWCGakNdQsjt6hUu', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Excepturi vitae eligendi. Et dignissimos beatae. Dolores ea maxime. Numquam dolores omnis. Nemo dol.', 8, '2024-03-14 23:10:22.387975', '2024-03-14 23:10:22.387975')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:10:22 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 5459)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:10:22 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2929)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:10:22 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:10:22 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:10:22 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:10:22 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
