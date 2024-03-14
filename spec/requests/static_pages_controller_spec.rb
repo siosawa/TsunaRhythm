@@ -59,3 +59,6 @@ end
 # microposts_controller_test.rb
 # users_controller_test
 # relationships_controller_test.rb
+
+require 'rails_helper'
+
