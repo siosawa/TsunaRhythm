@@ -1,8 +1,8 @@
 require 'rails_helper'
-
+# ログインの有無と画面遷移の検証
 RSpec.describe "StaticPages", type: :request do
   describe "GET /" do
-    it "ルートURLにアクセスが成功する" do
+    it "RootURLにアクセスが成功する" do
       get root_path
       expect(response).to have_http_status(200)
     end
@@ -22,14 +22,14 @@ RSpec.describe "StaticPages", type: :request do
       expect(response).to redirect_to(login_url)
     end
 
-    it "ログインしていない状態でユーザーをフォローするとログインURLにアクセスする" do
+    it "ログインしていない状態でユーザーをフォローすると/loginにアクセスする" do
       expect {
         post relationships_path
       }.to_not change(Relationship, :count)
       expect(response).to redirect_to(login_url)
     end
 
-    it "ログインしていない状態でポストを作成しようとするとログインURLにアクセスする" do
+    it "ログインしていない状態でポストを作成しようとすると/loginにアクセスする" do
       expect {
         post microposts_path, params: { micropost: { content: "おはよう" } }
       }.to_not change(Micropost, :count)

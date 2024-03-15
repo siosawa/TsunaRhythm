@@ -1,3 +1,4 @@
+#最初のRSpecテスト
 require'rails_helper'
 RSpec.describe 'RSpecのテスト' do
   it 'trueはいつもtrueか' do

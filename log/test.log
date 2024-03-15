@@ -6334,3 +6334,869 @@ Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'barton@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Jordan Beier', 'barton@hotmail.com', '2024-03-14 23:21:09.199244', '2024-03-14 23:21:09.199244', '$2a$04$E6YVbcP9voPctv4djIgtnu6/jIrmhmGmX0otelQMIeFnQVo4kpovm', NULL, FALSE, '$2a$04$o0ktN4gOuet2La6fntYhPudzgbhgZetsnnlWu5B0HAsIpXRe3J1Mu', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ratione enim sit. Aut qui corrupti. Perferendis beatae ut. Quisquam est id. Aliquam quae ea. Nulla .', 9, '2024-03-14 23:21:09.216313', '2024-03-14 23:21:09.216313')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ming@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Clay Waelchi', 'ming@yahoo.com', '2024-03-14 23:21:09.235506', '2024-03-14 23:21:09.235506', '$2a$04$FlMISF40ooKzecllyfsYHeDTFAsQDjrDFWUvu8Eu7EYV3foRwXR6e', NULL, FALSE, '$2a$04$LwCsB0udYkzCRR8ZXXLg8OBBkdvuZJNSzpGanhtluFXT4ZF3fDMii', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Dolor harum odio. Odit tempore nulla. Omnis ex quia. Veritatis perferendis placeat. Fuga ut tempori.', 10, '2024-03-14 23:21:09.239522', '2024-03-14 23:21:09.239522')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'caleb_hessel@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Reanna Boyle PhD', 'caleb_hessel@yahoo.com', '2024-03-14 23:21:09.247095', '2024-03-14 23:21:09.247095', '$2a$04$nH4af3rGnv0dGJAicqptneaxP2tSBwQ8SDwEJwSFB.82kgiPZB2TC', NULL, FALSE, '$2a$04$Qne6u.wzy/GuvVcC9UEllOJOWqsVZ5uUWDO4fxURf3NaVqt5qOJ5e', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Est autem ut. Aperiam voluptatem provident. Omnis quia fugiat. At minima soluta. Architecto amet la.', 11, '2024-03-14 23:21:09.250908', '2024-03-14 23:21:09.250908')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'dacia@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Blythe Bartoletti II', 'dacia@yahoo.com', '2024-03-14 23:21:09.256974', '2024-03-14 23:21:09.256974', '$2a$04$YyFOJr8Eam/GANQtdGweUOkFPyzF0KF2xm4Ml4v0EzlQVDSsanebC', NULL, FALSE, '$2a$04$Jo/PjaIWiFH2wLjLvWLq/uc57NKN76F8fQV5AbyaLCj2KjdNPCybG', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Maxime qui porro. Amet quos eligendi. Et laboriosam incidunt. Provident enim ratione. Est quia cumq.', 12, '2024-03-14 23:21:09.260709', '2024-03-14 23:21:09.260709')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:21:09 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5459)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:21:09 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2929)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:21:09 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3470)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:21:09 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:21:09 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:21:09 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'dione@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Stephaine Klocko', 'dione@hotmail.com', '2024-03-14 23:22:48.428666', '2024-03-14 23:22:48.428666', '$2a$04$/NHUP6v2CdhcJ2DYsDW.ReG/3xXyswFtJhoG96uwg4wtbbeHve9Jq', NULL, FALSE, '$2a$04$CFl/yc6952ShkfZawgD9bOjxjltBhUmRlkUuymL0qPOYxc77.X.yu', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (1.3ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ut eligendi minus. Architecto nobis magni. Necessitatibus animi facilis. Voluptatem non saepe. Dolo.', 13, '2024-03-14 23:22:48.445390', '2024-03-14 23:22:48.445390')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'dong@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Sen. Karoline Friesen', 'dong@yahoo.com', '2024-03-14 23:22:48.468656', '2024-03-14 23:22:48.468656', '$2a$04$jJ09iomirJM6GMkVjdzK4uVQ8HZibtH1Zn9UnlrYOhvudWCVygN4S', NULL, FALSE, '$2a$04$B3VLIhaANMvozhbJioemAuuQPWbjhNuRjkWmJUHqXFoveFWjCE0fi', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Laborum ratione ex. Asperiores vero corporis. Laudantium et voluptatem. Possimus exercitationem quo.', 14, '2024-03-14 23:22:48.472529', '2024-03-14 23:22:48.472529')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ariel_daugherty@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Pres. Loyd Oberbrunner', 'ariel_daugherty@yahoo.com', '2024-03-14 23:22:48.480277', '2024-03-14 23:22:48.480277', '$2a$04$VhRC2QnsDmVrkRDSOsZQDepSD5k5kp1bLDWUedvBHBmD28PH.yTh.', NULL, FALSE, '$2a$04$1Oqkxdiqf7yJ4xbvspC8a.JqwIqV4Wis7Bz/AL.Ar3PCqLdaXXoia', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.3ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ea beatae ut. Vero animi asperiores. Nesciunt reiciendis voluptas. Repellendus quidem consequatur. .', 15, '2024-03-14 23:22:48.484275', '2024-03-14 23:22:48.484275')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'rea@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Nelson Gutkowski Ret.', 'rea@yahoo.com', '2024-03-14 23:22:48.491177', '2024-03-14 23:22:48.491177', '$2a$04$nqnKuJTBbsm20G2gZTMff.nnvB12bRYVastcSK8Y6TnpGmUPPGlKC', NULL, FALSE, '$2a$04$g9NYrNj9mzFVf9RIie8Quuf1T.PaZEcy9YKeRloyx4Pn8cyQePVAW', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.3ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Id omnis consequatur. Dolor voluptas aspernatur. Molestiae earum voluptas. Et adipisci qui. Repella.', 16, '2024-03-14 23:22:48.496747', '2024-03-14 23:22:48.496747')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:22:48 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5459)
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:22:48 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2929)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:22:48 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3470)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:22:48 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:22:48 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:22:48 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'kaye_wiegand@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Jonas Bradtke', 'kaye_wiegand@gmail.com', '2024-03-14 23:24:17.117608', '2024-03-14 23:24:17.117608', '$2a$04$hSpFPbgGhsq6dGSAatkrJO7FdygmYsl59XXoOln1UB.86ncO5aX1y', NULL, FALSE, '$2a$04$VZ67yYFyioJ/dn8Fap2zeetqeLU8FkuTeBflrLWmL.wU8HCVii4oy', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Dolores exercitationem dignissimos. Nemo eligendi illo. Eligendi aspernatur animi. Nam reprehenderi.', 17, '2024-03-14 23:24:17.133458', '2024-03-14 23:24:17.133458')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'fatimah@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Tiffiny Runte CPA', 'fatimah@yahoo.com', '2024-03-14 23:24:17.151396', '2024-03-14 23:24:17.151396', '$2a$04$wQzHFyRN5vu3qDnG2h5ys.qISPBDc/Y0rV3CtPOPOuzh7KOONRNKq', NULL, FALSE, '$2a$04$2cOiUDS.rPOro16IXl9bquk7EGfidt9oYK7hL2nfEp/9jQuQmWiwi', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Quibusdam fugit inventore. Libero eos ad. Sunt labore quam. Non sapiente omnis. Minima quia dolorib.', 18, '2024-03-14 23:24:17.155186', '2024-03-14 23:24:17.155186')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'theresia.renner@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Altagracia Graham', 'theresia.renner@gmail.com', '2024-03-14 23:24:17.161266', '2024-03-14 23:24:17.161266', '$2a$04$va9j8THz46bNwmObp.CrqeoMzddlFAu70DgsgcKSZGNsQ7poFkLdS', NULL, FALSE, '$2a$04$UaPv/GRSkL9d6Lnoig/Gt.V0Zdmx/3s3y91JnGmZSiyPmNOlWtYLi', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Veritatis quia debitis. Sapiente ea aspernatur. Vero repellat tempora. Tenetur rem aut. Omnis quam .', 19, '2024-03-14 23:24:17.164420', '2024-03-14 23:24:17.164420')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'len@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Mr. Chi Schamberger', 'len@yahoo.com', '2024-03-14 23:24:17.170763', '2024-03-14 23:24:17.170763', '$2a$04$AMWYYefSNSvekI3KCDsESekvnWxiXWTgNyGXASodYNORbXW4v/4KC', NULL, FALSE, '$2a$04$EY3bACsiqbf8FzTJVsfJ1e4cmNvqueN/zrJpKul9G05hfOTVkd8Hu', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Labore ullam iure. Magnam quo voluptatem. Architecto fugiat eos. Illum dolorum eaque. Facilis maior.', 20, '2024-03-14 23:24:17.174179', '2024-03-14 23:24:17.174179')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'darwin.hirthe@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Deandre Shanahan', 'darwin.hirthe@hotmail.com', '2024-03-14 23:24:17.180803', '2024-03-14 23:24:17.180803', '$2a$04$IcrhDtnRHFJECpHClASlreKfIvtONiVvOtL8U7IGTNcAE/vI575RK', NULL, FALSE, '$2a$04$SWgfheLRZF.TvybRGOMsmeiVf38jOc9OlIBlH4KfJcAoSSnvWVnpW', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Dolores quidem ipsa. Corrupti nemo qui. Illo quia itaque. Sunt excepturi eos. Laborum reiciendis ve.', 21, '2024-03-14 23:24:17.185220', '2024-03-14 23:24:17.185220')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:24:17 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5459)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:24:17 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2929)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:24:17 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:24:17 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:24:17 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:24:17 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tran_jast@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Dannie Murphy', 'tran_jast@gmail.com', '2024-03-14 23:43:01.210694', '2024-03-14 23:43:01.210694', '$2a$04$Q0hfXW4aQiLHeHWVm5ApZee6clS58a6HGUcMli.0WtSry6FqM3lYe', NULL, FALSE, '$2a$04$e.YvM7NXDbU.TG7WA.vf1uZzmwooME.FGazwDoApNsSAACPwroqom', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.4ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Cupiditate magni molestiae. Dolores repellendus accusamus. Velit non eos. Distinctio esse incidunt..', 22, '2024-03-14 23:43:01.228607', '2024-03-14 23:43:01.228607')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'laine@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Sen. Svetlana Pouros', 'laine@gmail.com', '2024-03-14 23:43:01.248476', '2024-03-14 23:43:01.248476', '$2a$04$rpuKnzw8v6BbC1KepaCH7e7Eif/xtFGGBVEaPPb2vJ5HIQKctIZ.m', NULL, FALSE, '$2a$04$NYi9Ofi91KvegZfkvd9jkej8i2YJoCtwD87Lh2zP1SpCIF/EVUuwC', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Dolorum error aperiam. Enim aut non. Ea hic enim. Temporibus impedit nostrum. Rerum vel omnis. Ab m.', 23, '2024-03-14 23:43:01.252382', '2024-03-14 23:43:01.252382')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'solomon@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Oralia Block DDS', 'solomon@gmail.com', '2024-03-14 23:43:01.258679', '2024-03-14 23:43:01.258679', '$2a$04$2xfvztGH8orqbf2zFdemy..4VRpyc.BkLUjVhsGFrSejxugFDxiLa', NULL, FALSE, '$2a$04$an2CEsF06kK7R/EtwCHObuIW4TPI1WEa7zuV8/gfoWbHYrzrS7a8e', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Natus minus ab. Voluptatum esse dolorum. Quam quidem praesentium. Repellat quibusdam molestiae. Vel.', 24, '2024-03-14 23:43:01.261976', '2024-03-14 23:43:01.261976')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tonette@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Carlyn Klein', 'tonette@hotmail.com', '2024-03-14 23:43:01.268641', '2024-03-14 23:43:01.268641', '$2a$04$uKKgTUHvpXI8aCjDzUAxf.LFdqdpJieY/v9qTpVuCGPKGwBIRsXMO', NULL, FALSE, '$2a$04$LOIHH4a5Ut2ysKBzzeCX0ebyrZf9yoelxz7lHBYAM.ylEI5xyVH1S', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Et a sed. Autem aut pariatur. Nam qui consequuntur. Corrupti sapiente dolorem. Dolorum voluptatem a.', 25, '2024-03-14 23:43:01.272755', '2024-03-14 23:43:01.272755')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'nanci.kshlerin@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Ludivina MacGyver', 'nanci.kshlerin@gmail.com', '2024-03-14 23:43:01.279205', '2024-03-14 23:43:01.279205', '$2a$04$AvHQnPYgXYjPSdSpw5Kqdepaa1vju6Qw36BRornztOZUX0Lzor5w.', NULL, FALSE, '$2a$04$/sRtv1sdk6PypScK0KfRX.LdyB6HibIrbrEHVc/mm04H6OA7vCIK.', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.3ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Illo dolore nobis. In assumenda harum. Quibusdam culpa et. Libero aut quae. A nobis eaque. Repudian.', 26, '2024-03-14 23:43:01.283880', '2024-03-14 23:43:01.283880')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:43:01 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5459)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:43:01 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2929)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:43:01 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 4.4ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3470)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:43:01 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:43:01 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:43:01 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ricarda@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Christopher Sawayn CPA', 'ricarda@yahoo.com', '2024-03-14 23:51:00.134667', '2024-03-14 23:51:00.134667', '$2a$04$Ww9378LvycB0hGNSPRsJ8.EzjkDTBDlOLp35RSmScDbsjjxPi4fEK', NULL, FALSE, '$2a$04$62Du/INrLXbsBU4EyXOTteNDAU/HAFbN97IVPdpj4vGLm7S85uLye', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Et alias debitis. Dolorum quis non. Nulla non dolor. Vel rerum non. Sit suscipit tenetur. Asperiore.', 27, '2024-03-14 23:51:00.151222', '2024-03-14 23:51:00.151222')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'edgar@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Mr. Zackary Hirthe', 'edgar@gmail.com', '2024-03-14 23:51:00.170411', '2024-03-14 23:51:00.170411', '$2a$04$AXvAgzgfvStDQkmcIK7A0.ZHp7Aps3z9qGAx3ifR7eikPzSdxJH3u', NULL, FALSE, '$2a$04$JdpKumTVNe9aUfCGbQLnIeGCBTrrQ.bTdtG2WNHw0TVyYkbGCuGbu', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Dolor non optio. Ipsam vel ducimus. Non laboriosam harum. At repudiandae voluptas. Repudiandae plac.', 28, '2024-03-14 23:51:00.174245', '2024-03-14 23:51:00.174245')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'jammie.hagenes@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Rev. Valorie Gleason', 'jammie.hagenes@gmail.com', '2024-03-14 23:51:00.180708', '2024-03-14 23:51:00.180708', '$2a$04$1uXWj9AIk.F4eTHU.m8g..MUDSYUDF4UXQcIDReL8p9MMcgi47knq', NULL, FALSE, '$2a$04$dh1CPlTC54OG9YSsn22.BeliFU1zI7ikUVG0J1B4IIVewFBwRdbrO', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Officiis fugiat exercitationem. Commodi fugit beatae. Quod dicta aut. Doloremque minima eius. Nulla.', 29, '2024-03-14 23:51:00.183892', '2024-03-14 23:51:00.183892')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'elvis_kerluke@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Bruce Hammes', 'elvis_kerluke@yahoo.com', '2024-03-14 23:51:00.189803', '2024-03-14 23:51:00.189803', '$2a$04$PjGhPi2k5nIWtIiEwAr3bOGgfbKQCCkdU7F4/JsaV5g.GxoP8uNxm', NULL, FALSE, '$2a$04$1yjQrXCkZ7vtsYshVwFXtOOFpjE/QfngJX5hKMDPwUpwOFNweFv6.', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Minus fugit adipisci. Voluptas iusto tempora. Temporibus nulla quisquam. Molestias provident offici.', 30, '2024-03-14 23:51:00.193314', '2024-03-14 23:51:00.193314')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'lynell@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Armando Nienow', 'lynell@hotmail.com', '2024-03-14 23:51:00.199250', '2024-03-14 23:51:00.199250', '$2a$04$EKJt8ZZQXq12s9e0nW889OyYFy4T7M4i8/mBxQpi3kxnGv8idspLm', NULL, FALSE, '$2a$04$ZP51gHN.Xc6nqabtrcOOI.w14bBJ6f8DVQko5i26sBUQNRlTu7PRu', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Nostrum quia amet. Autem numquam optio. Sunt dolores at. Occaecati quibusdam autem. Consequuntur co.', 31, '2024-03-14 23:51:00.202618', '2024-03-14 23:51:00.202618')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:51:00 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5459)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:51:00 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2929)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:51:00 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 4.5ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3470)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:51:00 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:51:00 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:51:00 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'dylan_parisian@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Clair Kutch', 'dylan_parisian@yahoo.com', '2024-03-14 23:53:24.169174', '2024-03-14 23:53:24.169174', '$2a$04$x4ZNEj8yJHixbVJQaSoRA.xP4nYCgdmPR7wEQa7w8Fvyxug6M/jRG', NULL, FALSE, '$2a$04$IblqVddOQ9yPGCEa03Rc2uNeErxS3Wtq1DayguUyeGO8txHGcBW/q', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.4ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Nesciunt voluptates exercitationem. Molestiae molestias quo. Voluptas deleniti animi. Qui et laboru.', 32, '2024-03-14 23:53:24.185447', '2024-03-14 23:53:24.185447')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monty_prosacco@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Arnette Rohan', 'monty_prosacco@gmail.com', '2024-03-14 23:53:24.211443', '2024-03-14 23:53:24.211443', '$2a$04$UDTbtpx16krea98E6jaCceRTDPuBxPgLBk7m7rIoB4Z8rThbOO3cy', NULL, FALSE, '$2a$04$G2ONTzxqCyCzul.jDwYs..YP/naQdPaHcwLywOfx26.3xq/AKzch.', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Distinctio autem et. Voluptas distinctio optio. Quod maiores nemo. Nesciunt in optio. Iusto nostrum.', 33, '2024-03-14 23:53:24.215739', '2024-03-14 23:53:24.215739')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'buddy@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Buck Ondricka', 'buddy@yahoo.com', '2024-03-14 23:53:24.221956', '2024-03-14 23:53:24.221956', '$2a$04$kEu/hV7wnPHB750dSwl8/u1jZ62RXxOj9ce99xa6dOFiPQSPM6w.G', NULL, FALSE, '$2a$04$OBlfIS10dIkX/DnmKDBB2untxjd83E3EDhhBPeXMuq5pEKrMIlLgm', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Corporis ullam rerum. Dolor rerum dignissimos. Cupiditate praesentium dolor. Sed ea consequatur. Di.', 34, '2024-03-14 23:53:24.225326', '2024-03-14 23:53:24.225326')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'fanny_davis@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Crystal Rowe', 'fanny_davis@hotmail.com', '2024-03-14 23:53:24.231594', '2024-03-14 23:53:24.231594', '$2a$04$jhFgfF.yVHBMqc.VqCFXn.co/S5B60OdlFcVUR4lb1B8YgKCVlnse', NULL, FALSE, '$2a$04$TwLJ1adGtj9Z22cpc4/uDOLqPRRzp8yB6IX/sWaGCxYuQGVgI6zOi', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Qui enim maxime. Dolorem quia tenetur. Animi tempora mollitia. Tenetur est voluptatem. Rerum nobis .', 35, '2024-03-14 23:53:24.235276', '2024-03-14 23:53:24.235276')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'jefferey@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Denice Bergnaum', 'jefferey@hotmail.com', '2024-03-14 23:53:24.241531', '2024-03-14 23:53:24.241531', '$2a$04$JPsybLI8a77Q24DnBLSJ4.IuWrj0GekwFs4U0YhXStuIjBLIlGHi2', NULL, FALSE, '$2a$04$J9XfYQcRB1Ldkgn0RULvQel4IWjGccXj6HNbD8gNqBWjNR3bFtPDe', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Quibusdam accusantium qui. Aut nulla voluptatibus. Molestias inventore molestiae. Nesciunt dolores .', 36, '2024-03-14 23:53:24.246578', '2024-03-14 23:53:24.246578')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:53:24 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5459)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:53:24 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2929)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:53:24 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:53:24 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:53:24 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:53:24 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'sang.damore@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Cassondra Dietrich DVM', 'sang.damore@hotmail.com', '2024-03-14 23:54:11.909609', '2024-03-14 23:54:11.909609', '$2a$04$cg0rYozsYLSH58syRJ4Nme8qwxa3bbtsHoilKxPWXJfcNqePtFM.2', NULL, FALSE, '$2a$04$dilwkQlx1LmtFa/EKRkeTOmCPHcie38aXgLomFmrkNv7UP4rhhyOi', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.3ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ipsam velit modi. Impedit ad omnis. Porro dolore dignissimos. Ab eos assumenda. Consequatur assumen.', 37, '2024-03-14 23:54:11.924866', '2024-03-14 23:54:11.924866')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'jovan@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Dan Trantow', 'jovan@gmail.com', '2024-03-14 23:54:11.942611', '2024-03-14 23:54:11.942611', '$2a$04$ZknBoGLhzM1o5hmyN7vNsuIopHjYCzifPhtWljfnPLEhW/OYqGjvK', NULL, FALSE, '$2a$04$5I9FFeL25uwUkvLUn47xKOa4wEi0vpxaD9bLoMObo51MgN/l6/eVa', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ut qui vel. Voluptatibus labore distinctio. Libero quia dolorem. Et illum sunt. Consequuntur quae i.', 38, '2024-03-14 23:54:11.946355', '2024-03-14 23:54:11.946355')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'felton@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Russell Leuschke', 'felton@hotmail.com', '2024-03-14 23:54:11.952265', '2024-03-14 23:54:11.952265', '$2a$04$9//5mbVHYbPHXszA5f1M9u9wGMzslH98tmFlI4T5i69ICqYlKHEBe', NULL, FALSE, '$2a$04$6sjQVG2UleO.pNbRcttggezwmhR12RyqJOoFmgUJQ/CiX1ShlFoyK', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Fugit dolorem et. Asperiores eligendi nostrum. Itaque numquam amet. Quae quia at. Dolorem doloribus.', 39, '2024-03-14 23:54:11.955618', '2024-03-14 23:54:11.955618')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'jani@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Tasha Dickinson', 'jani@hotmail.com', '2024-03-14 23:54:11.961532', '2024-03-14 23:54:11.961532', '$2a$04$mJV6qKMNGf2q3oGogfuf0uCXjmMmxUfobQJ0./kx5eu.v2hKMj982', NULL, FALSE, '$2a$04$16DCNULn5xEWkrltly5OLeuEd4jn9HRDra8laSdR7gQ6salYHdR7W', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Ducimus pariatur nulla. Qui vitae neque. Nostrum tempora officiis. Et quia quia. Mollitia fugit quo.', 40, '2024-03-14 23:54:11.965035', '2024-03-14 23:54:11.965035')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'kenneth_strosin@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Edmundo Emard', 'kenneth_strosin@hotmail.com', '2024-03-14 23:54:11.970555', '2024-03-14 23:54:11.970555', '$2a$04$Wqem3Iu5J5Tu7T4WVRI9.e.2PcN.GcVApkvE1PjQ/rZbGiXHLmjIG', NULL, FALSE, '$2a$04$LsXRKAKvD2dI68IM.6BuIeeZrxPjv7f4acVb9Hz0B9tYQI1iQ.DjW', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Eos reprehenderit quo. Ex a omnis. Quidem quos debitis. Et fugiat eum. Ea aut sed. Est iste quos. A.', 41, '2024-03-14 23:54:11.974292', '2024-03-14 23:54:11.974292')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:54:11 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5459)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:54:12 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2929)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:54:12 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:54:12 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:54:12 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:54:12 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'chung@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Jona Satterfield', 'chung@hotmail.com', '2024-03-14 23:55:34.875506', '2024-03-14 23:55:34.875506', '$2a$04$O5X0AW3STAlYdJIfctvpMOc4nJuPrNPoDtk3jy3MSVMitMtP2TLO6', NULL, FALSE, '$2a$04$8PKwj5W51/c11OzJfFaebO2yZsUX2Shbqkph28LypZMWqV7ZKvxPG', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Maiores accusantium qui. Nihil fugiat ea. Amet laboriosam unde. Tempore asperiores soluta. Asperior.', 42, '2024-03-14 23:55:34.891825', '2024-03-14 23:55:34.891825')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'antionette.stanton@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Dionna Kreiger', 'antionette.stanton@yahoo.com', '2024-03-14 23:55:34.910373', '2024-03-14 23:55:34.910373', '$2a$04$/jnzag.O8HZk/9aqsdTEX.p/TYzc0N.EtqGg.V70UDyAEHO3oMw.G', NULL, FALSE, '$2a$04$Lpw3Eni3UvpMWr4a3iK/n.PTKlghCRIzzJW1Bkmp1PGualZmfIFke', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Voluptas non nihil. In eaque debitis. Hic alias cum. Odio impedit sint. Facilis et consectetur. Tem.', 43, '2024-03-14 23:55:34.914823', '2024-03-14 23:55:34.914823')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'allan@hotmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Otis Hahn', 'allan@hotmail.com', '2024-03-14 23:55:34.921461', '2024-03-14 23:55:34.921461', '$2a$04$EPjEsmTsFowNQAZkXhpbFO98BYLy1Ek6IuBUSTMXzUU5I7DI5rWhy', NULL, FALSE, '$2a$04$PswmYubxq21k4xPvISJlz.sj5azRsO65K2Be0EKUw/o.8tb/L8wla', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.1ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Quas recusandae ut. Officiis ut id. Cum quis ut. Cumque ab atque. Dolore consequatur nobis. Asperna.', 44, '2024-03-14 23:55:34.925033', '2024-03-14 23:55:34.925033')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'annita@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Prof. Burl Rohan', 'annita@yahoo.com', '2024-03-14 23:55:34.931298', '2024-03-14 23:55:34.931298', '$2a$04$BAU/Du7FtOG5qU0P82sQlui4zqlpjEUf2tw1NSOilnvuxyjTbvcVy', NULL, FALSE, '$2a$04$9rOvQoNbVtbIxUhZrOeJsuYg5tYzlA44qkp55rIGyMvFXaLCxR7gm', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Quas dolore quo. Repudiandae dolorem eos. Ducimus harum nesciunt. Sed dolores ea. Porro facere omni.', 45, '2024-03-14 23:55:34.934872', '2024-03-14 23:55:34.934872')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'celestine@yahoo.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `password_digest`, `remember_digest`, `admin`, `activation_digest`, `activated`, `activated_at`, `reset_digest`, `reset_sent_at`) VALUES ('Rea Smith', 'celestine@yahoo.com', '2024-03-14 23:55:34.942495', '2024-03-14 23:55:34.942495', '$2a$04$O4QruGcjy8UmiUKwNV9F7OezfSr8pvUgG3JV9e0s9Xsz1pN8HCA36', NULL, FALSE, '$2a$04$p6FID/Tzd3aG2e9c4tmMcuhBKyq9tG35KO1lj5xk8NTjVJChUG.zy', FALSE, NULL, NULL, NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMicropost Create (0.2ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('Reiciendis harum sit. Accusamus aspernatur exercitationem. Corrupti deleniti voluptate. Numquam aut.', 46, '2024-03-14 23:55:34.946518', '2024-03-14 23:55:34.946518')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2024-03-14 23:55:34 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1167)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 498)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5459)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 7763)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-14 23:55:34 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1792)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2929)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3530)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2024-03-14 23:55:35 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 229)
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 2078)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2327)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4171)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2024-03-14 23:55:35 +0000
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRelationship Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+Started POST "/relationships" for 127.0.0.1 at 2024-03-14 23:55:35 +0000
+Processing by RelationshipsController#create as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 303)
+  [1m[36mRelationship Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `relationships`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMicropost Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+Started POST "/microposts" for 127.0.0.1 at 2024-03-14 23:55:35 +0000
+Processing by MicropostsController#create as HTML
+  Parameters: {"micropost"=>{"content"=>"おはよう"}}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 303 See Other in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
+  [1m[36mMicropost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
