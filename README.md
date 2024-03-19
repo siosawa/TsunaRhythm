@@ -44,13 +44,13 @@ docker-compose down
 
 # ECRへのpush手順
 ```
-docker build --platform linux/amd64 -t 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1 . 
+docker build --platform linux/amd64 -t ************.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1 . 
 ```
 ```
-aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin ************.dkr.ecr.ap-northeast-1.amazonaws.com
 ```
 ```
-docker push 504252798833.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1
+docker push ************.dkr.ecr.ap-northeast-1.amazonaws.com/tsunarhythm:v1
 ```
 
 # テストの実行
