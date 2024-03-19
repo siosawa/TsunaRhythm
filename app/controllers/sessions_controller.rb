@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
 
-  # 新しいセッション（ログインフォーム）を表示するアクションです。
+  # 新しいセッション（ログインフォーム）を表示するアクション。
   def new
   end
 
-  # ログイン処理を行うアクションです。
+  # ログイン処理を行うアクション。
   def create
     # ユーザーをメールアドレスで検索します。入力されたメールアドレスは小文字に変換されます。
     user = User.find_by(email: params[:session][:email].downcase)

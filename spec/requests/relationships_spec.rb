@@ -15,11 +15,11 @@ RSpec.describe RelationshipsController, type: :request do
 
     context 'ログインしている状態で' do
       before do
-        session_params = { email: user.email, password: user.password }
+        session_params = { email: user.email, password: user.password, remember_me: 0 }
         post login_path, params: { session: session_params }
       end
 
-      # it 'ログインしている状態でフォローするとフォローフォロワーの関係が1件増える' do
+      # it 'フォローするとフォローフォロワーの関係が1件増える' do
       #   expect {
       #     post relationships_path, params: { followed_id: other_user.id }
       #   }.to change(Relationship, :count).by(1)

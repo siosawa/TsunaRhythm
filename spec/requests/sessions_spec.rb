@@ -41,18 +41,4 @@ RSpec.describe 'Sessions', type: :request do
       expect(response).to have_http_status(:see_other)
     end
   end
-
-  # describe 'GET #check_session' do
-  #   specify 'ログイン中のユーザー情報を返す' do
-  #     # ログイン
-  #     session_params = { email: user.email, password: user.password, remember_me: 0 }
-  #     post login_path, params: { session: session_params }
-  #     # リクエスト実行
-  #     get '/api/v1/check'
-  #     json = JSON.parse(response.body)
-
-  #     expect(response).to have_http_status :ok
-  #     expect(json['user']['name']).to eq(user.name)
-  #   end
-  # end
 end
