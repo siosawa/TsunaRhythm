@@ -1,5 +1,5 @@
 require 'rails_helper'
-# ログインの有無と画面遷移の検証
+# ログインの有無による画面遷移の検証
 RSpec.describe "StaticPages", type: :request do
   describe "GET /" do
     it "RootURLにアクセスが成功する" do
@@ -59,6 +59,4 @@ end
 # microposts_controller_test.rb
 # users_controller_test
 # relationships_controller_test.rb
-
-require 'rails_helper'
 

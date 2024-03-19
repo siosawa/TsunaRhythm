@@ -5,6 +5,6 @@ FactoryBot.define do
     #   introduction          { Faker::Lorem.paragraph_by_chars(number: 100) }
     #   image                 { Rack::Test::UploadedFile.new(Rails.root.join('app/assets/images/default.jpeg')) }
       password              { 'password' }
-    #   password_confirmation { 'password' }
+      password_confirmation { 'password' }
     end
   end

@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   # get 'static_pages/salt'
   # get 'static_pages/contact'
 
-  get  "/help",      to: "static_pages#help"
+  get  "/help",        to: "static_pages#help"
   # これでhelp_pathが指定した名前になる
-  get  "/about",     to: "static_pages#about"
-  get  "/contact",   to: "static_pages#contact"
-  get  "/roomlist",   to: "static_pages#roomlist"
-  get  "/post",        to: "static_pages#post"
+  get  "/about",       to: "static_pages#about"
+  get  "/contact",     to: "static_pages#contact" 
+  get  "/roomlist",    to: "static_pages#roomlist"
+  get  "/post",        to: "static_pages#post"      
   get  "/dashboard",   to: "static_pages#dashboard"
   get  "/signup",      to: "users#new"
   get  "/login",       to: "sessions#new"
