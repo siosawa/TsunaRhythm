@@ -29,6 +29,8 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+Rails.logger = Logger.new(STDOUT) # Rails.loggerを出す
+ActiveRecord::Base.logger = Logger.new(STDOUT) # SQLログ出す
 RSpec.configure do |config|
   config.fixture_path = Rails.root.join('spec/fixtures')
   config.use_transactional_fixtures = true
