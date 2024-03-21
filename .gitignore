@@ -1,5 +1,4 @@
-config/master.key
-db/mysql/volumes/
-tmp/cache/bootsnap/
+/config/master.key
 tmp/cache/assets/
 log/
+db/mysql/volumes/
