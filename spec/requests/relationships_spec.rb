@@ -4,6 +4,26 @@ RSpec.describe RelationshipsController, type: :request do
   let(:user) { create(:user) }
   let(:other_user) { create(:user) }
   let(:target_user) { create(:user) }
+  let(:unregistered_user) { build(:user) }
+
+describe 'POST #create' do
+  context '存在するユーザー' do
+    specify 'ログインが成功するとルートパスにリダイレクトする' do
+      session_params = { email: user.email, password: user.password, remember_me: 0 }
+      post login_path, params: { session: session_params }
+      expect(response).to redirect_to(root_url) 
+    end
+  end
+
+  context '存在しないユーザー' do
+    specify 'ログインが失敗する' do
+      session_params = { email: unregistered_user.email, password: unregistered_user.password, remember_me: 0 }
+      post login_path, params: { session: session_params }
+      expect(response).to have_http_status(:unprocessable_entity)
+      expect(response).to render_template('new')
+    end
+  end
+end
 
   describe 'POST #create' do
     context 'ログインしていない状態で' do
