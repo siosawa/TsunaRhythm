@@ -23,24 +23,18 @@ class UsersController < ApplicationController
   end
 
   def create
+    Rails.logger.info "ユーザー作成処理を開始します。"
     @user = User.new(user_params)
     if @user.save
+      Rails.logger.info "ユーザー(ID: #{@user.id})が正常に保存されました。アクティベーションメールを送信します。"
       @user.send_activation_email
-      # UserMailer.account_activation(@user).deliver_now
-      flash[:info] = "Please check your email to activate your account."
+      flash[:info] = "アカウントを有効にするには、メールを確認してください。"
       redirect_to root_url
-      # reset_session # セキュリティ対策
-      # log_in @user # アカウント登録時にログインもする
-      # # 保存の成功をここで扱う。
-      # flash[:success] = "Welcome to the Sample App!"
-      # # 変数かのように扱うメソッド。get リクエストされた時に1度だけ採用する。
-      # # showでも良いが、後々のことを考えてflashを使う。
-      # redirect_to @user #新しくHTTPリクエストを発行する。この場合はshowから
-      # # @userオブジェクトを探し、そのidを自動で取得してredirectしてくれる
     else
+      Rails.logger.warn "ユーザーの保存に失敗しました。ユーザー作成フォームを再表示します。"
       render 'new', status: :unprocessable_entity 
-      #422エラーをユーザーに伝える。ブラウザでもエラーを確認できるようにする？
     end
+    Rails.logger.info "ユーザー作成処理が完了しました。"
   end
 
   def edit
