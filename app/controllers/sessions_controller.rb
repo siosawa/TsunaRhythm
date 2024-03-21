@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
   # 新しいセッション（ログインフォーム）を表示するアクション。
   def new
+    Rails.logger.info "Sessions_Controllerのnewアクションが呼び出されました。"  
   end
 
   def create
