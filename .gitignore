@@ -1,4 +1,4 @@
 /config/master.key
-/tmp/cache/assets/
+/tmp/cache/
 /log/
 /db/mysql/volumes/
