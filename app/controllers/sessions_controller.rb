@@ -4,45 +4,73 @@ class SessionsController < ApplicationController
   def new
   end
 
-  # ログイン処理を行うアクション。
   def create
-    # ユーザーをメールアドレスで検索します。入力されたメールアドレスは小文字に変換されます。
+    Rails.logger.info "Sessions_Controllerのcreateアクションが呼び出されました。"  
+    Rails.logger.info "メールアドレスでユーザーを検索しています。"
     user = User.find_by(email: params[:session][:email].downcase)
-    # ユーザーが存在し、かつパスワードが正しい場合にログイン処理を続行します。
+  
+    if user
+      Rails.logger.info "ユーザーが見つかりました。パスワードの認証を試みます。"
+    else
+      Rails.logger.info "指定されたメールアドレスのユーザーが見つかりませんでした。"
+    end
+  
     if user && user.authenticate(params[:session][:password])
-      # ユーザーがアクティベーションされているかをチェックします。
+      Rails.logger.info "パスワードが正しいことが確認されました。"
+  
       if user.activated?
-        # ログイン後にリダイレクトするURLをセッションから取得します。
+        Rails.logger.info "ユーザーアカウントがアクティブ化されています。"
         forwarding_url = session[:forwarding_url]
-        # セッションをリセットします。
         reset_session
-        # ユーザーのログイン情報を記憶するかどうかを、フォームからの入力に基づいて判定します。
-        params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-        # ユーザーをログイン状態にします。
+  
+        if params[:session][:remember_me] == '1'
+          remember(user)
+          Rails.logger.info "ユーザーのログイン情報を記憶しました。"
+        else
+          forget(user)
+          Rails.logger.info "ユーザーのログイン情報を記憶しません。"
+        end
+  
         log_in user
-        # ルートURLまたは指定されたURLにリダイレクトします。
+        Rails.logger.info "ユーザーをログイン状態にしました。リダイレクトを行います。"
         redirect_to root_url || user
       else
-        # アカウントがアクティベーションされていない場合のメッセージを設定します。
-        message  = "アカウントがアクティブ化されていません"
-        message += "メールでアクティベーションリンクを確認してください"
+        Rails.logger.info "ユーザーアカウントがアクティブ化されていません。エラーメッセージを設定し、リダイレクトします。"
+        message  = "アカウントがアクティブ化されていません。"
+        message += "メールでアクティベーションリンクを確認してください。"
         flash[:warning] = message
-        # ルートURLにリダイレクトします。
-        redirect_to root_url
+  
+        redirect_to login_path
       end
     else
-      # メールアドレスとパスワードの組み合わせが無効な場合、エラーメッセージを表示します。
-      flash.now[:danger] = 'メールアドレスとパスワードの組み合わせが無効です'
-      # ログインフォームを再度表示します。
+      Rails.logger.info "メールアドレスとパスワードの組み合わせが無効です。エラーメッセージを設定し、ログインフォームを再度表示します。"
+  
+      flash.now[:danger] = 'メールアドレスとパスワードの組み合わせが無効です。'
       render 'new', status: :unprocessable_entity
     end
+  
+    Rails.logger.info "Sessions_Controllerのcreateアクションの処理が完了しました。"
   end
 
   # ログアウト処理を行うアクションです。
+  # def destroy
+  #   log_out if logged_in?
+  #   redirect_to root_url, status: :see_other
+  # end
+  
   def destroy
-    # ユーザーがログインしている場合、ログアウトします。
-    log_out if logged_in?
-    # ルートURLにリダイレクトし、ステータスコード303(See Other)を返します。
+    Rails.logger.info "SessionsControllerのdestroyアクションが呼び出されました。ログアウト処理を開始します。"
+  
+    if logged_in?
+      Rails.logger.info "ユーザーがログイン状態にあるため、ログアウト処理を実行します。"
+      log_out
+      Rails.logger.info "ユーザーのログアウト処理が正常に完了しました。"
+    else
+      Rails.logger.info "ログインしているユーザーが存在しないため、ログアウト処理は実行されません。"
+    end
+  
+    Rails.logger.info "ユーザーをルートURLにリダイレクトします。ステータスコード303(See Other)で応答します。"
     redirect_to root_url, status: :see_other
   end
+  
 end

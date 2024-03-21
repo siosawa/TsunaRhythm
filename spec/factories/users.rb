@@ -6,5 +6,6 @@ FactoryBot.define do
     #   image                 { Rack::Test::UploadedFile.new(Rails.root.join('app/assets/images/default.jpeg')) }
       password              { 'password' }
       password_confirmation { 'password' }
+      activated             { true }
     end
   end
