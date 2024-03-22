@@ -12,9 +12,10 @@ RSpec.describe 'Microposts', type: :request do
       @micropost2 = create(:micropost)
     end
 
-    # specify 'リクエストが成功する' do
-    #   get post_path
-    #   expect(response).to have_http_status :ok
-    # end
+    specify 'リクエストが成功する' do
+      get microposts_path
+      expect(response).to have_http_status :ok
+    end
   end
 end
+

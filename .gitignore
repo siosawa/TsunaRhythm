@@ -2,3 +2,5 @@
 /tmp/cache/
 /log/
 /db/mysql/volumes/
+/tmp/pids/server.pid
+/public/assets/
