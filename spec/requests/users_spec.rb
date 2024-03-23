@@ -54,9 +54,3 @@ RSpec.describe "StaticPages", type: :request do
     # end
   end
 end
-
-# 置き換える残りのファイル
-# microposts_controller_test.rb
-# users_controller_test
-# relationships_controller_test.rb
-
