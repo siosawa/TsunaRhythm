@@ -18,7 +18,7 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
-    micropost_content = @micropost.content 
+    micropost_content = @micropost.content #ログ出力のため一時保存
     @micropost.destroy
     flash[:success] = "Micropost deleted"
     Rails.logger.info "マイクロポストが削除されました。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"
@@ -41,5 +41,16 @@ class MicropostsController < ApplicationController
       @micropost = current_user.microposts.find_by(id: params[:id])
       redirect_to root_url, status: :see_other if @micropost.nil?
       Rails.logger.info "マイクロポストが見つかりません。ユーザーID: #{current_user.id}, 指定されたID: #{params[:id]}"
+    end
+
+    # ログイン済みユーザーかどうか確認
+    def logged_in_user
+      unless logged_in?
+        Rails.logger.info "未ログインユーザーがログインが必要なページにアクセスしようとしました。login_pathへリダイレクトします。"
+        flash[:danger] = "ログインしてください"
+        redirect_to login_path 
+      else
+        Rails.logger.info "ログイン済みユーザーによるアクセスが確認されました。"
+      end
     end
 end
