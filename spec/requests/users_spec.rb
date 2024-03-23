@@ -168,35 +168,94 @@ RSpec.describe UsersController, type: :request do
     end
   end
 
-  # describe 'DELETE #destroy' do
-  #   context '管理者ユーザーとしてログインしている場合' do
-  #     before do
-       
-  #     end 
+  describe 'DELETE #destroy' do
+    let(:admin_user) { create(:user, :admin) }
+    let!(:other_user1) { create(:user) }
+    let!(:other_user2) { create(:user) }
+    let!(:other_user3) { create(:user) }
+    context '管理者ユーザーとしてログインしている場合' do
+      before do
+        session_params = { email: admin_user.email, password: admin_user.password, remember_me: 0}
+        post login_path, params: { session: session_params }
+      end 
 
-  #     it 'ユーザーを削除できること' do
-  #       expect {
-  #         delete :destroy, params: { id: other_user.id }
-  #       }.to change(User, :count).by(-1)
-  #     end 
+      it 'ユーザーを削除できること' do
+        expect {
+          delete user_path(other_user1)
+        }.to change(User, :count).by(-1)
+      end 
 
-  #     it 'ユーザー一覧ページにリダイレクトすること' do
-  #       delete :destroy, params: { id: other_user.id }
-  #       expect(response).to redirect_to(users_url)
-  #     end
-  #   end 
+      it 'ユーザー一覧ページにリダイレクトすること' do
+        delete user_path(other_user2)
+        expect(response).to redirect_to(users_url)
+      end
+    end 
 
-  #   context '非管理者ユーザーとしてログインしている場合' do
-  #     before do
-  #       log_in user
-  #       delete :destroy, params: { id: other_user.id }
-  #     end 
+    context '非管理者ユーザーとしてログインしている場合' do
+      before do
+        session_params = { email: user.email, password: user.password, remember_me: 0 }
+        post login_path, params: { session: session_params }
+      end 
 
-  #     it 'ユーザーを削除できず、ホームページにリダイレクトすること' do
-  #       expect(response).to redirect_to(root_url)
-  #     end
-  #   end
-  # end
+      it 'ユーザーを削除できず、ホームページにリダイレクトすること' do
+        delete user_path(other_user3) 
+        expect(response).to redirect_to(root_url)
+      end
+    end
+  end
 
+  describe 'GET #following' do
+  let(:other_user) { create(:user) }
+    context 'ログインしているユーザーの場合' do
+      before do
+        session_params = { email: user.email, password: user.password, remember_me: 0 }
+        post login_path, params: { session: session_params }
+      end
+      
+      it 'リクエストが成功すること' do
+        get following_user_path(user)
+        expect(response).to have_http_status(200)
+      end
+
+      it 'フォローしているユーザーの一覧が取得できること' do
+        user.follow(other_user)
+        get following_user_path(user)
+        expect(response.body).to include(other_user.name)
+      end
+    end
+
+    context 'ログインしていない場合' do
+      it 'ログインページにリダイレクトすること' do
+        get following_user_path(user)
+        expect(response).to redirect_to(login_path)
+      end
+    end
+  end
+
+  describe 'GET #followers' do
+    context 'ログインしているユーザーの場合' do
+      before do
+        session_params = { email: user.email, password: user.password, remember_me: 0 }
+        post login_path, params: { session: session_params }
+      end
+
+      it 'リクエストが成功すること' do
+        get followers_user_path(user)
+        expect(response).to have_http_status(:ok)
+      end
+
+      it 'フォロワーの一覧が取得できること' do
+        get followers_user_path(user)
+        expect(assigns(:users)).to match_array(user.followers)
+      end
+    end
+
+    context 'ログインしていない場合' do
+      it 'ログインページにリダイレクトすること' do
+        get followers_user_path(user)
+        expect(response).to redirect_to(login_url)
+      end
+    end
+  end
 end
 
