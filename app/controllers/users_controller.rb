@@ -60,11 +60,32 @@ class UsersController < ApplicationController
     end
   end
 
+  # def destroy
+  #   Rails.logger.info "users_controllerのdestroyアクションを実行しようとしています"
+  #   User.find(params[:id]).destroy
+  #   Rails.logger.info "ユーザーを削除しました。"
+  #   flash[:success] = "ユーザーを削除しました"
+  #   redirect_to users_url, status: :see_other
+  # end
+ 
   def destroy
     Rails.logger.info "users_controllerのdestroyアクションを実行しようとしています"
-    User.find(params[:id]).destroy
-    Rails.logger.info "ユーザーの削除に成功しました。"
-    flash[:success] = "ユーザーを削除しました"
+    user = User.find_by(id: params[:id])
+    
+    if user.nil?
+      Rails.logger.info "ユーザーが見つかりませんでした。"
+      flash[:alert] = "ユーザーが見つかりませんでした。"
+      redirect_to users_url and return
+    end
+  
+    if user.destroy
+      Rails.logger.info "ユーザーを削除しました。"
+      flash[:success] = "ユーザーを削除しました。"
+    else
+      Rails.logger.info "ユーザーの削除に失敗しました。"
+      flash[:alert] = "ユーザーの削除に失敗しました。"
+    end
+  
     redirect_to users_url, status: :see_other
   end
   
