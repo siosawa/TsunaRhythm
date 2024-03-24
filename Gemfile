@@ -24,6 +24,7 @@ gem 'mysql2', '~> 0.5.6'
 
 group :production do
   gem 'aws-sdk-s3', '1.114.0', require: false
+  gem 'pg', '1.3.5'
 end
 
 group :development, :test do
@@ -48,8 +49,4 @@ group :test do
   gem 'rails-controller-testing', '1.0.5'
   gem 'selenium-webdriver',       '4.8.3'
   gem 'webdrivers',               '5.2.0'
-end
-
-group :production do
-  gem 'pg', '1.3.5'
 end
