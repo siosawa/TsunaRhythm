@@ -20,7 +20,6 @@ class SessionsController < ApplicationController
 
       if user.activated?
         Rails.logger.info 'ユーザーアカウントがアクティブ化されています。'
-        forwarding_url = session[:forwarding_url]
         reset_session
 
         if params[:session][:remember_me] == '1'
@@ -51,12 +50,6 @@ class SessionsController < ApplicationController
 
     Rails.logger.info 'Sessions_Controllerのcreateアクションの処理が完了しました。'
   end
-
-  # ログアウト処理を行うアクションです。
-  # def destroy
-  #   log_out if logged_in?
-  #   redirect_to root_url, status: :see_other
-  # end
 
   def destroy
     Rails.logger.info 'SessionsControllerのdestroyアクションが呼び出されました。ログアウト処理を開始します。'
