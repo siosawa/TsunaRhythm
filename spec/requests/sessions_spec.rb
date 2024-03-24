@@ -9,7 +9,7 @@ RSpec.describe 'Sessions', type: :request do
       specify 'ログインが成功するとルートパスにリダイレクトする' do
         session_params = { email: user.email, password: user.password, remember_me: 0 }
         post login_path, params: { session: session_params }
-        expect(response).to redirect_to(root_url) 
+        expect(response).to redirect_to(root_url)
       end
     end
 

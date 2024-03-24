@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe 'Microposts', type: :request do
   describe 'ログイン確認テスト' do
     let(:user) { create(:user) }
-    let(:unregistered_user) { build(:user) } 
+    let(:unregistered_user) { build(:user) }
 
     context '存在するユーザーは' do
       specify 'ログインが成功しルートパスにリダイレクトする' do
         session_params = { email: user.email, password: user.password, remember_me: 0 }
         post login_path, params: { session: session_params }
-        expect(response).to redirect_to(root_url) 
+        expect(response).to redirect_to(root_url)
       end
     end
 
@@ -25,11 +25,11 @@ RSpec.describe 'Microposts', type: :request do
 
   describe 'POST #create' do
     let(:user) { create(:user) }
-    let(:micropost) { create(:micropost, user_id: user.id)}
+    let(:micropost) { create(:micropost, user_id: user.id) }
     let(:other_user) { create(:user) }
     let(:other_micropost) { create(:micropost) }
-    
-    context 'ログインしている状態で' do 
+
+    context 'ログインしている状態で' do
       before do
         session_params = { email: user.email, password: user.password, remember_me: 0 }
         post login_path, params: { session: session_params }
@@ -48,22 +48,22 @@ RSpec.describe 'Microposts', type: :request do
       end
 
       it 'マイクロポストの作成が成功すると、post数が3件増える' do
-        expect {
-          post microposts_path, params: { micropost: { content: "テスト投稿1" } }
-          post microposts_path, params: { micropost: { content: "テスト投稿2" } }
-          post microposts_path, params: { micropost: { content: "テスト投稿3" } }
-        }.to change(user.microposts, :count).by(3)
+        expect do
+          post microposts_path, params: { micropost: { content: 'テスト投稿1' } }
+          post microposts_path, params: { micropost: { content: 'テスト投稿2' } }
+          post microposts_path, params: { micropost: { content: 'テスト投稿3' } }
+        end.to change(user.microposts, :count).by(3)
       end
-      
+
       it 'マイクロポストの作成が失敗すると、post数が増減しない' do
-        expect {
-          post microposts_path, params: { micropost: { content: " " } }
-        }.not_to change(user.microposts, :count)
+        expect do
+          post microposts_path, params: { micropost: { content: ' ' } }
+        end.not_to change(user.microposts, :count)
       end
     end
 
     context 'ログインしていない状態で' do
-      #　未実装
+      # 　未実装
       # it 'GET #post_pathへのリクエストが失敗しlogin_pathにリダイレクトされる' do
       #   get post_path
       #   expect(response).to redirect_to(login_path)
@@ -80,9 +80,9 @@ RSpec.describe 'Microposts', type: :request do
     let(:user) { create(:user) }
     let(:other_user1) { create(:user) }
     let(:other_user2) { create(:user) }
-    
+
     before do
-      #ログイン
+      # ログイン
       session_params = { email: user.email, password: user.password, remember_me: 0 }
       post login_path, params: { session: session_params }
       # 別のユーザーでマイクロポストを新規作成
@@ -105,7 +105,6 @@ RSpec.describe 'Microposts', type: :request do
     end
   end
 
-
   describe 'DELETE #destroy' do
     let(:user) { create(:user) }
     let(:other_user1) { create(:user) }
@@ -122,27 +121,27 @@ RSpec.describe 'Microposts', type: :request do
     #   end
     # end
 
-    context 'ログインしている状態' do      
+    context 'ログインしている状態' do
       before do
         # ログイン
         session_params = { email: user.email, password: user.password, remember_me: 0 }
         post login_path, params: { session: session_params }
         # 新規マイクロポスト作成
-        @micropost = create(:micropost, user: user)
+        @micropost = create(:micropost, user:)
       end
 
       it 'マイクロポストの削除が成功すると、post数が1件減る' do
-        expect {
+        expect do
           delete micropost_path(@micropost)
-        }.to change(user.microposts, :count).by(-1)
+        end.to change(user.microposts, :count).by(-1)
       end
-      
+
       it 'マイクロポストの削除が失敗すると、post数が変わらない' do
         # 別のユーザーのマイクロポストを削除しようとする
         other_micropost = create(:micropost, user: other_user1)
-        expect {
+        expect do
           delete micropost_path(other_micropost)
-        }.not_to change(other_user1.microposts, :count)
+        end.not_to change(other_user1.microposts, :count)
       end
     end
   end

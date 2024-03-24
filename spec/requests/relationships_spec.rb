@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe RelationshipsController, type: :request do
   describe 'ログイン確認テスト' do
     let(:user) { create(:user) }
-    let(:unregistered_user) { build(:user) } 
+    let(:unregistered_user) { build(:user) }
 
     context '存在するユーザーは' do
       specify 'ログインが成功しルートパスにリダイレクトする' do
         session_params = { email: user.email, password: user.password, remember_me: 0 }
         post login_path, params: { session: session_params }
-        expect(response).to redirect_to(root_url) 
+        expect(response).to redirect_to(root_url)
       end
     end
 
@@ -25,7 +25,7 @@ RSpec.describe RelationshipsController, type: :request do
 
   describe 'POST #create' do
     let(:user) { create(:user) }
-    let(:other_user) { create(:user) } 
+    let(:other_user) { create(:user) }
 
     context 'ログインしていない状態で' do
       it 'フォローするとログイン画面にリダイレクトする' do
@@ -40,33 +40,32 @@ RSpec.describe RelationshipsController, type: :request do
         post login_path, params: { session: session_params }
       end
 
-      it "フォローするとRelationshipの数が1増える" do
-        expect {
-        post relationships_path, params: { followed_id: other_user.id }
-        }.to change(Relationship, :count).by(1)
+      it 'フォローするとRelationshipの数が1増える' do
+        expect do
+          post relationships_path, params: { followed_id: other_user.id }
+        end.to change(Relationship, :count).by(1)
       end
 
       # すでにフォローしているユーザーをフォローするとエラーになる
     end
-    
   end
 
   describe 'DELETE #destroy' do
     let(:user) { create(:user) }
     let(:other_user) { create(:user) }
-    
+
     context 'ログインしていない状態で' do
       before do
         @relationship = user.active_relationships.create(followed_id: other_user.id)
       end
 
       it 'フォロー解除するとRelationshipの数が変わらない' do
-        expect {
+        expect do
           delete relationship_path(@relationship)
-        }.to_not change(Relationship, :count)
-        expect(response).to redirect_to(login_path)  
+        end.to_not change(Relationship, :count)
+        expect(response).to redirect_to(login_path)
       end
-      
+
       it 'フォロー解除すると失敗し、ログイン画面にリダイレクトする' do
         delete relationship_path(@relationship)
         expect(response).to redirect_to(login_path)
@@ -81,10 +80,10 @@ RSpec.describe RelationshipsController, type: :request do
       end
 
       it 'フォロー解除をするとRelationshipの数が1減少する' do
-        expect {
+        expect do
           delete relationship_path(@relationship)
-        }.to change(Relationship, :count).by(-1)
+        end.to change(Relationship, :count).by(-1)
       end
-    end  
+    end
   end
 end

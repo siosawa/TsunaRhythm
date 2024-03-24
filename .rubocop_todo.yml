@@ -1,0 +1,117 @@
+# Bundler/DuplicatedGroup: Gemfile内で同一のグループが重複して定義されている場合に警告します。
+Bundler/DuplicatedGroup:
+  Exclude:
+    - 'Gemfile'
+
+# Lint/DuplicateMethods: 同一クラスまたはモジュール内でメソッドが重複して定義されている場合に警告します。
+Lint/DuplicateMethods:
+  Exclude:
+    - 'app/controllers/users_controller.rb'
+    - 'app/helpers/users_helper.rb'
+
+# Lint/UselessAssignment: 使用されていない変数への代入を警告します。
+Lint/UselessAssignment:
+  Exclude:
+    - 'app/controllers/sessions_controller.rb'
+
+# Metrics/AbcSize: メソッドのABCサイズ（代入、分岐、条件の複雑さ）が最大値を超える場合に警告します。
+Metrics/AbcSize:
+  Max: 55
+
+# Metrics/BlockLength: ブロックの長さ（行数）が最大値を超える場合に警告します。
+Metrics/BlockLength:
+  Max: 221
+
+# Metrics/CyclomaticComplexity: メソッドの循環的複雑度が最大値を超える場合に警告します。
+Metrics/CyclomaticComplexity:
+  Max: 8
+
+# Metrics/MethodLength: メソッドの長さ（行数）が最大値を超える場合に警告します。
+Metrics/MethodLength:
+  Max: 37
+
+# Metrics/PerceivedComplexity: メソッドの認知複雑度が最大値を超える場合に警告します。
+Metrics/PerceivedComplexity:
+  Max: 11
+
+# Naming/AccessorMethodName: アクセサーメソッドの命名が規約に違反している場合に警告します。
+Naming/AccessorMethodName:
+  Exclude:
+    - 'app/controllers/password_resets_controller.rb'
+
+# Naming/PredicateName: 述語メソッド（真偽値を返すメソッド）の命名が規約に違反している場合に警告します。
+Naming/PredicateName:
+  Exclude:
+    - 'minitest/test_helper.rb'
+
+# Rails/BulkChangeTable: Railsのマイグレーションでテーブルの一括変更が行われている場合に警告します。
+Rails/BulkChangeTable:
+  Exclude:
+    - 'db/migrate/20231120084304_add_activation_to_users.rb'
+    - 'db/migrate/20231122052851_add_reset_to_users.rb'
+    - 'db/migrate/20231129142850_create_relationships.rb'
+
+# Rails/HelperInstanceVariable: ヘルパーファイル内でインスタンス変数を使用している場合に警告します。
+Rails/HelperInstanceVariable:
+  Exclude:
+    - 'app/helpers/sessions_helper.rb'
+
+# Rails/InverseOf: `inverse_of`オプションが設定されていない場合に警告します。
+Rails/InverseOf:
+  Exclude:
+    - 'app/models/user.rb'
+
+# Rails/SkipsModelValidations: モデルのバリデーションをスキップするメソッドを使用している場合に警告します。
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'app/models/user.rb'
+    - 'minitest/helpers/sessions_helper_test.rb'
+    - 'minitest/integration/password_resets_test.rb'
+
+# Style/ClassAndModuleChildren: クラスとモジュールの定義方法に関するスタイルガイドです。
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'minitest/channels/application_cable/connection_test.rb'
+    - 'minitest/test_helper.rb'
+
+# Style/CommentedKeyword: コメントアウトされたキーワード（例：`end`や`class`）を警告します。
+Style/CommentedKeyword:
+  Exclude:
+    - 'app/helpers/sessions_helper.rb'
+
+# Style/Documentation: 全てのクラスとモジュールの先頭にドキュメンテーションコメントが必要かどうかをチェックします。ここでは無効化されています。
+Style/Documentation:
+  Enabled: false
+
+
+# 文字列リテラルの冒頭での `# frozen_string_literal: true` のコメントを強制しない
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# グローバル標準入出力($stdout, $stderr, $stdin)の使用を指摘するが、特定のファイルでは無視
+Style/GlobalStdStream:
+  Exclude:
+    - 'config/environments/production.rb' # 本番環境の設定ファイル
+    - 'spec/rails_helper.rb' # RSpecの設定ファイル
+
+# fetchメソッドにブロックを渡す際の冗長性を指摘するが、特定のファイルでは無視
+Style/RedundantFetchBlock:
+  Exclude:
+    - 'config/puma.rb' # Pumaの設定ファイル
+
+# 安全なナビゲーション演算子(&.)の使用を指摘するが、特定のファイルでは無視
+Style/SafeNavigation:
+  Exclude:
+    - 'app/controllers/password_resets_controller.rb' # パスワードリセットコントローラ
+    - 'app/controllers/sessions_controller.rb' # セッションコントローラ
+    - 'app/helpers/sessions_helper.rb' # セッションヘルパー
+
+# 文字列の連結に対する指摘を行うが、特定のファイルでは無視
+Style/StringConcatenation:
+  Exclude:
+    - 'minitest/models/user_test.rb' # Userモデルのテスト
+
+# 1行あたりの最大文字数を134文字に設定
+Layout/LineLength:
+  Max: 134
+

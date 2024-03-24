@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -22,13 +22,13 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp/caching-dev.txt").exist?
+  if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -43,14 +43,14 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   host = 'https://cautious-space-guacamole-p4qwx5qwv9726464-3000.app.github.dev'
-  #host = 'localhost:3000'                     # ローカル環境
+  # host = 'localhost:3000'                     # ローカル環境
   # ここをコピペすると失敗します。この続きとしてaccount_activation/:token/editと
   # 繋がったところに接続される/
 
   # 自分の環境のホストに変えてください。
   # クラウドIDEの場合は以下をお使いください
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  #config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.default_url_options = { host:, protocol: 'https' }
+  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.

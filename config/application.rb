@@ -1,5 +1,5 @@
-require_relative "boot"
-require "rails/all"
+require_relative 'boot'
+require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module SampleApp
@@ -11,9 +11,8 @@ module SampleApp
     config.i18n.default_locale = :ja
 
     # ロケールファイルが格納されているディレクトリを指定
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}')]
 
     config.active_storage.variant_processor = :mini_magick
   end
 end
-
