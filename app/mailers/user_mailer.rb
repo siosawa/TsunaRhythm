@@ -2,7 +2,7 @@
 
 #   def account_activation(user)
 #     @user = user # テキストで呼び出せる
-#     mail to:user.email, 
+#     mail to:user.email,
 #     subject: "Account activation"
 #   end
 
@@ -13,16 +13,15 @@
 #   end
 # end
 class UserMailer < ApplicationMailer
-
   # アカウント有効化メール
   def account_activation(user)
     @user = user
-    mail to: user.email, subject: "Account activation"
+    mail to: user.email, subject: 'Account activation'
   end
 
   # パスワードリセットメール
   def password_reset(user)
     @user = user
-    mail to: user.email, subject: "Password reset"
+    mail to: user.email, subject: 'Password reset'
   end
 end

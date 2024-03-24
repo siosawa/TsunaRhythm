@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class Following < ActionDispatch::IntegrationTest
   def setup
@@ -9,39 +9,37 @@ class Following < ActionDispatch::IntegrationTest
 end
 
 class FollowPagesTest < Following
-
-  test "フォロー中ページ" do
+  test 'フォロー中ページ' do
     get following_user_path(@user)
     assert_response :success
     assert_not @user.following.empty?
     assert_match @user.following.count.to_s, response.body
     @user.following.each do |user|
-      assert_select "a[href=?]", user_path(user)
+      assert_select 'a[href=?]', user_path(user)
     end
   end
 
-  test "フォロワーページ" do
+  test 'フォロワーページ' do
     get followers_user_path(@user)
     assert_response :success
     assert_not @user.followers.empty?
     assert_match @user.followers.count.to_s, response.body
     @user.followers.each do |user|
-      assert_select "a[href=?]", user_path(user)
+      assert_select 'a[href=?]', user_path(user)
     end
   end
 end
 
 class FollowTest < Following
-
-  test "標準的な方法でユーザーをフォローする" do
-    assert_difference "@user.following.count", 1 do
+  test '標準的な方法でユーザーをフォローする' do
+    assert_difference '@user.following.count', 1 do
       post relationships_path, params: { followed_id: @other.id }
     end
     assert_redirected_to @other
   end
 
-  test "Hotwireを使ってユーザーをフォローする" do
-    assert_difference "@user.following.count", 1 do
+  test 'Hotwireを使ってユーザーをフォローする' do
+    assert_difference '@user.following.count', 1 do
       post relationships_path(format: :turbo_stream),
            params: { followed_id: @other.id }
     end
@@ -49,7 +47,6 @@ class FollowTest < Following
 end
 
 class Unfollow < Following
-
   def setup
     super
     @user.follow(@other)
@@ -58,22 +55,20 @@ class Unfollow < Following
 end
 
 class UnfollowTest < Unfollow
-
-  test "標準的な方法でユーザーのフォローを解除する" do
-    assert_difference "@user.following.count", -1 do
+  test '標準的な方法でユーザーのフォローを解除する' do
+    assert_difference '@user.following.count', -1 do
       delete relationship_path(@relationship)
     end
     assert_response :see_other
     assert_redirected_to @other
   end
 
-  test "Hotwireを使ってユーザーのフォローを解除する" do
-    assert_difference "@user.following.count", -1 do
+  test 'Hotwireを使ってユーザーのフォローを解除する' do
+    assert_difference '@user.following.count', -1 do
       delete relationship_path(@relationship, format: :turbo_stream)
     end
   end
 end
-
 
 # require "test_helper"
 

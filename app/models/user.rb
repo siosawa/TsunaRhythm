@@ -1,15 +1,16 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
-  has_many :active_relationships, class_name:  "Relationship",
-                                  foreign_key: "follower_id",
-                                  dependent:   :destroy 
-  has_many :passive_relationships, class_name:  "Relationship",
-                                   foreign_key: "followed_id",
-                                   dependent:   :destroy
+  has_many :active_relationships, class_name: 'Relationship',
+                                  foreign_key: 'follower_id',
+                                  dependent: :destroy
+  has_many :passive_relationships, class_name: 'Relationship',
+                                   foreign_key: 'followed_id',
+                                   dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
-                                  
-  attr_accessor :remember_token ,:activation_token ,:reset_token
+
+  attr_accessor :remember_token, :activation_token, :reset_token
+
   # データベースと連携しない、インスタンス変数とほぼ同義のremember_tokenを作成する
   # メソッドを作るメソッド（メタメソッド）を作成する
   # before_save { self.email = self.email.downcase}
@@ -17,27 +18,30 @@ class User < ApplicationRecord
   # アカウントを追加する直前に行う。渡したメールアドレスを小文字にしたものをセーブする直前に自分自身にコピーする
   # 大文字と小文字で複数メールアドレスを登録できないようにする。大抵のデータベースでは必要ない。
   # 前提を作り上げる
-  before_create :create_activation_digest #からのインスタンスがデータに保存された時。バリデーションを通過したとき。
-  validates :name,  presence: true, length: { maximum:  50 } 
+  before_create :create_activation_digest # からのインスタンスがデータに保存された時。バリデーションを通過したとき。
+  validates :name,  presence: true, length: { maximum: 50 }
   # nameに空白スペースがあるかを検証する。空白スペースがなければtrue
   validates :email, presence: true, length: { maximum: 255 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # 大文字は定数（動的に変更されることのない値）として扱われる。
   validates :email, presence: true, length:     { maximum: 255 },
-                                    format:     { with: VALID_EMAIL_REGEX },
-                                    uniqueness: { case_sensitive: false } #大文字小文字は無視 
-  has_secure_password #セキュアなパスワード機能を導入。ハッシュ値のログだって見せないよ。
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false } # 大文字小文字は無視
+  has_secure_password # セキュアなパスワード機能を導入。ハッシュ値のログだって見せないよ。
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   # 渡された文字列のハッシュ値を返す
-  def User.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                  BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
+  def self.digest(string)
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create(string, cost:)
   end
 
   # ランダムなトークンを返す
-  def User.new_token
+  def self.new_token
     SecureRandom.urlsafe_base64
   end
 
@@ -56,20 +60,21 @@ class User < ApplicationRecord
 
   # # 渡されたトークンがダイジェストと一致したらtrueを返す
   # def authenticated?(remember_token)
-  #   return false if remember_digest.nil? 
+  #   return false if remember_digest.nil?
   #   #returnを先に書くことでこの処理がされなかった時次の処理を行わないようにする。
   #   BCrypt::Password.new(remember_digest).is_password?(remember_token)
   # end
-  
+
   # 渡されたトークンがダイジェストと一致したらtrueを返す
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
     return false if digest.nil?
+
     BCrypt::Password.new(digest).is_password?(token)
   end
 
-   # ユーザーのログイン情報を破棄する
-   def forget
+  # ユーザーのログイン情報を破棄する
+  def forget
     update_attribute(:remember_digest, nil)
   end
 
@@ -109,20 +114,21 @@ class User < ApplicationRecord
                      WHERE  follower_id = :user_id"
     Micropost.where("user_id IN (#{following_ids})
                      OR user_id = :user_id", user_id: id)
-                     .includes(:user, image_attachment: :blob)
+             .includes(:user, image_attachment: :blob)
   end
+
   # ユーザーをフォローする
   def follow(other_user)
-    Rails.logger.info "ユーザー(ID: #{self.id})がユーザー(ID: #{other_user.id})をフォローしようとしています。"
+    Rails.logger.info "ユーザー(ID: #{id})がユーザー(ID: #{other_user.id})をフォローしようとしています。"
     following << other_user unless self == other_user
-    Rails.logger.info "ユーザー(ID: #{self.id})がユーザー(ID: #{other_user.id})をフォローしました。"
+    Rails.logger.info "ユーザー(ID: #{id})がユーザー(ID: #{other_user.id})をフォローしました。"
   end
 
   # ユーザーをフォロー解除する
   def unfollow(other_user)
-    Rails.logger.info "ユーザー(ID: #{self.id})がユーザー(ID: #{other_user.id})をフォロー解除しようとしています。"
+    Rails.logger.info "ユーザー(ID: #{id})がユーザー(ID: #{other_user.id})をフォロー解除しようとしています。"
     following.delete(other_user)
-    Rails.logger.info "ユーザー(ID: #{self.id})がユーザー(ID: #{other_user.id})をフォロー解除しました。"
+    Rails.logger.info "ユーザー(ID: #{id})がユーザー(ID: #{other_user.id})をフォロー解除しました。"
   end
 
   # 現在のユーザーが他のユーザーをフォローしていればtrueを返す
@@ -132,15 +138,14 @@ class User < ApplicationRecord
 
   private
 
-    # メールアドレスをすべて小文字にする
-    def downcase_email
-      self.email = email.downcase
-    end
+  # メールアドレスをすべて小文字にする
+  def downcase_email
+    self.email = email.downcase
+  end
 
-    # 有効化トークンとダイジェストを作成および代入する
-    def create_activation_digest
-      self.activation_token  = User.new_token
-      self.activation_digest = User.digest(activation_token)
-    end
-
+  # 有効化トークンとダイジェストを作成および代入する
+  def create_activation_digest
+    self.activation_token  = User.new_token
+    self.activation_digest = User.digest(activation_token)
+  end
 end
