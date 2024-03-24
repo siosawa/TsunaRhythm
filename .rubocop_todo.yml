@@ -1,8 +1,3 @@
-# Bundler/DuplicatedGroup: Gemfile内で同一のグループが重複して定義されている場合に警告します。
-Bundler/DuplicatedGroup:
-  Exclude:
-    - 'Gemfile'
-
 # Lint/DuplicateMethods: 同一クラスまたはモジュール内でメソッドが重複して定義されている場合に警告します。
 Lint/DuplicateMethods:
   Exclude:
