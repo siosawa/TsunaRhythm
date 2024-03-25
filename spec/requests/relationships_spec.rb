@@ -62,7 +62,7 @@ RSpec.describe RelationshipsController, type: :request do
       it 'フォロー解除するとRelationshipの数が変わらない' do
         expect do
           delete relationship_path(@relationship)
-        end.to_not change(Relationship, :count)
+        end.not_to change(Relationship, :count)
         expect(response).to redirect_to(login_path)
       end
 

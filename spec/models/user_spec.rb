@@ -78,6 +78,7 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
     end
   end
+
   describe 'association' do
     describe 'micropost' do
       specify 'userが削除された時、関連するマイクロポストも削除される' do

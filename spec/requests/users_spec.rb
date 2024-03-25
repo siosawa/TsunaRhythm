@@ -4,6 +4,7 @@ RSpec.describe UsersController, type: :request do
 
   describe 'ログイン確認テスト' do
     let(:unregistered_user) { build(:user) }
+
     context '存在するユーザーは' do
       specify 'ログインが成功しルートパスにリダイレクトする' do
         session_params = { email: user.email, password: user.password, remember_me: 0 }
@@ -98,7 +99,7 @@ RSpec.describe UsersController, type: :request do
             password: '',
             activated: true
           } }
-        end.to change(User, :count).by(0)
+        end.not_to change(User, :count)
       end
 
       it '新規登録ページが再表示されること' do
@@ -173,6 +174,7 @@ RSpec.describe UsersController, type: :request do
     let!(:other_user1) { create(:user) }
     let!(:other_user2) { create(:user) }
     let!(:other_user3) { create(:user) }
+
     context '管理者ユーザーとしてログインしている場合' do
       before do
         session_params = { email: admin_user.email, password: admin_user.password, remember_me: 0 }
@@ -206,6 +208,7 @@ RSpec.describe UsersController, type: :request do
 
   describe 'GET #following' do
     let(:other_user) { create(:user) }
+
     context 'ログインしているユーザーの場合' do
       before do
         session_params = { email: user.email, password: user.password, remember_me: 0 }
@@ -214,7 +217,7 @@ RSpec.describe UsersController, type: :request do
 
       it 'リクエストが成功すること' do
         get following_user_path(user)
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       it 'フォローしているユーザーの一覧が取得できること' do

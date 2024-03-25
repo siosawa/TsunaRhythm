@@ -11,22 +11,22 @@ RSpec.describe Micropost, type: :model do
 
     specify 'user_idが存在しない場合は無効になる' do
       micropost.user_id = nil
-      expect(micropost).to_not be_valid
+      expect(micropost).not_to be_valid
     end
 
     specify 'contentが存在しない場合は無効になる' do
       micropost.content = ''
-      expect(micropost).to_not be_valid
+      expect(micropost).not_to be_valid
     end
 
     it 'のcontentが空の時は無効になる' do
       micropost.content = ''
-      expect(micropost).to_not be_valid
+      expect(micropost).not_to be_valid
     end
 
     it 'のcontentが140字を超えた時は無効になる' do
       micropost.content = Faker::Lorem.characters(number: 141)
-      expect(micropost).to_not be_valid
+      expect(micropost).not_to be_valid
     end
   end
 end

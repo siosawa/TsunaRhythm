@@ -35,7 +35,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
   gem 'solargraph', '0.48.0'
   gem 'web-console', '4.2.0'
 end
