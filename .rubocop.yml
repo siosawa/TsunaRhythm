@@ -14,6 +14,7 @@ AllCops:
     - "public/**/*"
     - "log/**/*"
     - "tmp/**/*"
+    - "bin/*"
 
 # ドキュメントの無い public class を許可する
 Style/Documentation:
