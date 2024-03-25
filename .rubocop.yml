@@ -1,7 +1,121 @@
 inherit_from: .rubocop_todo.yml
 
 require:
+  - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude: # 自動生成されるファイルは基本的に除外
+    - "vendor/**/*"
+    - "db/**/*"
+    - "config/**/*"
+    - "public/**/*"
+    - "log/**/*"
+    - "tmp/**/*"
+
+# ドキュメントの無い public class を許可する
+Style/Documentation:
+  Enabled: false
+
+# 文字列リテラルをimmutableにするマジックコメントfrozen_string_literal: trueは使用しない
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# # １行の空のメソッド定義を許可する（自動生成直後のファイルがoffenseとなってしまうため）?
+# Style/EmptyMethod:
+#   Enabled: false
+
+#   # コントローラ
+# # privateメソッド可読性向上のため許可?
+# Layout/IndentationWidth:
+#   Exclude:
+#     - "app/controllers/*
+
+# Layout/IndentationConsistency:
+#   Exclude:
+#     - "app/controllers/*"
+
+# # ユーザーパスワードとパスワード確認のバリデーションをスキップする必要があるため、update_attributeの使用を許可?
+# Rails/SkipsModelValidations:
+#   Exclude:
+#     - "app/models/user.rb"
+
+# Session関連
+# 可読性・汎用性を重視し許可
+# Style/SafeNavigation:
+#   Exclude:
+#     - "app/controllers/sessions_controller.rb"
+#     - "app/helpers/sessions_helper.rb"
+
+# Rails/HelperInstanceVariable:
+#   Exclude:
+#     - "app/helpers/sessions_helper.rb"
+
+# Abc Sizeがデフォルト値以上のcontrollerを例外として許可（デフォルトAbc Size:15）
+Metrics/AbcSize:
+  Exclude:
+    - "app/controllers/*"
+
+# # bullet設定のため行数制限の対象外とする（デフォルト制限行数：25行/ブロック）
+# # テストは行数規定を除外
+# Metrics/BlockLength:
+#   Exclude:
+#     - "config/environments/development.rb"
+#     - "spec/models/*"
+#     - "spec/requests/*"
+#     - "spec/spec_helper.rb"
+
+# コントローラと一部モデル、ヘルパーはメソッド行数が11行以上でも許可する
+Metrics/MethodLength:
+  Exclude:
+    - "app/controllers/*"
+
+# 一部コントローラとモデルは規定値以上の行数を許可する（デフォルト制限行数：100行）
+Metrics/ClassLength:
+  Exclude:
+    - "app/controllers/users_controller.rb"
+    - "app/models/user.rb"
+
+# テスト用自動生成ファイルを除外
+Style/ExpandPathArguments:
+  Exclude:
+    - "bin/rspec"
+
+# テストは行数規定を除外
+RSpec/ExampleLength:
+  Exclude:
+    - "spec/models/micropost_spec.rb"
+    - "spec/models/relationship_spec.rb"
+    - "spec/models/user_spec.rb"
+    - "spec/requests/users_spec.rb"
+    - "spec/requests/relationships_spec.rb"
+    - "spec/requests/sessions_spec.rb"
+    - "spec/requests/microposts_spec.rb"
 
 
-  
+# テスト文言は日本語とするため除外
+RSpec/ContextWording:
+  Exclude:
+    - "spec/requests/*.rb"
+
+# request specは複数のexpectationsを許可する
+RSpec/MultipleExpectations:
+  Exclude:
+    - "spec/requests/*.rb"
+
+# ネストを許可
+RSpec/NestedGroups:
+  Exclude:
+    - "spec/requests/users_spec.rb"
+    - "spec/requests/microposts_spec.rb"
+    - "spec/requests/relationships_spec.rb"
+
+# インスタンス変数を許可
+RSpec/InstanceVariable:
+  Exclude:
+    - "spec/requests/microposts_spec.rb"
+    - "spec/requests/users_spec.rb"
+    - "spec/requests/relationships_spec.rb"
+

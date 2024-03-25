@@ -26,6 +26,12 @@ class UsersController < ApplicationController
     Rails.logger.info 'users_controllerのnewアクションが完了しました'
   end
 
+  def edit
+    Rails.logger.info 'users_controllerのeditアクションを実行しようとしています'
+    @user = User.find(params[:id])
+    Rails.logger.info 'users_controllerのeditアクションが完了しました'
+  end
+
   def create
     Rails.logger.info 'ユーザー作成処理を開始します。'
     @user = User.new(user_params)
@@ -39,12 +45,6 @@ class UsersController < ApplicationController
       render 'new', status: :unprocessable_entity
     end
     Rails.logger.info 'ユーザー作成処理が完了しました。'
-  end
-
-  def edit
-    Rails.logger.info 'users_controllerのeditアクションを実行しようとしています'
-    @user = User.find(params[:id])
-    Rails.logger.info 'users_controllerのeditアクションが完了しました'
   end
 
   def update

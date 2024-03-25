@@ -1,9 +1,11 @@
 class PasswordResetsController < ApplicationController
-  before_action :get_user,         only: %i[edit update]
+  before_action :user_get,         only: %i[edit update]
   before_action :valid_user,       only: %i[edit update]
   before_action :check_expiration, only: %i[edit update] # （1）への対応
 
   def new; end
+
+  def edit; end
 
   def create
     @user = User.find_by(email: params[:password_reset][:email].downcase)
@@ -17,8 +19,6 @@ class PasswordResetsController < ApplicationController
       render 'new', status: :unprocessable_entity
     end
   end
-
-  def edit; end
 
   def update
     if params[:user][:password].empty?                  # （3）への対応
@@ -42,7 +42,7 @@ class PasswordResetsController < ApplicationController
 
   # beforeフィルタ
 
-  def get_user
+  def user_get
     @user = User.find_by(email: params[:email])
   end
 

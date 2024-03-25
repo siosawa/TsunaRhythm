@@ -1,101 +1,112 @@
-# Metrics/AbcSize: メソッドのABCサイズ（代入、分岐、条件の複雑さ）が最大値を超える場合に警告します。
+
 Metrics/AbcSize:
-  Max: 55
+  Max: 18
+  # メソッドのABCサイズの最大許容値を18に設定します。ABCサイズは、メソッドの複雑さを測定する指標です。
 
-# Metrics/BlockLength: ブロックの長さ（行数）が最大値を超える場合に警告します。
-Metrics/BlockLength:
-  Max: 221
-
-# Metrics/CyclomaticComplexity: メソッドの循環的複雑度が最大値を超える場合に警告します。
 Metrics/CyclomaticComplexity:
-  Max: 8
+  Max: 9
+  # メソッドの循環的複雑度の最大許容値を9に設定します。循環的複雑度は、コードの分岐点の数を測定する指標です。
 
-# Metrics/MethodLength: メソッドの長さ（行数）が最大値を超える場合に警告します。
 Metrics/MethodLength:
-  Max: 37
+  Max: 11
+  # メソッド内の最大行数を11に設定します。これは、メソッドが長すぎると読みにくくなるためです。
 
-# Metrics/PerceivedComplexity: メソッドの認知複雑度が最大値を超える場合に警告します。
 Metrics/PerceivedComplexity:
   Max: 11
+  # メソッドの認知的複雑度の最大許容値を11に設定します。認知的複雑度は、人間がコードを理解するのに必要な労力の尺度です。
 
-# Naming/AccessorMethodName: アクセサーメソッドの命名が規約に違反している場合に警告します。
-Naming/AccessorMethodName:
+RSpec/FilePath:
   Exclude:
-    - 'app/controllers/password_resets_controller.rb'
+    - 'spec/requests/relationships_spec.rb'
+    - 'spec/requests/users_spec.rb'
+  # RSpecのファイルパス規約から特定のテストファイルを除外します。
 
-# Naming/PredicateName: 述語メソッド（真偽値を返すメソッド）の命名が規約に違反している場合に警告します。
-Naming/PredicateName:
+RSpec/IndexedLet:
   Exclude:
-    - 'minitest/test_helper.rb'
+    - 'spec/requests/microposts_spec.rb'
+    - 'spec/requests/users_spec.rb'
+  # letのインデックス付けに関する規約から特定のテストファイルを除外します。
 
-# Rails/BulkChangeTable: Railsのマイグレーションでテーブルの一括変更が行われている場合に警告します。
-Rails/BulkChangeTable:
+RSpec/Rails/InferredSpecType:
   Exclude:
-    - 'db/migrate/20231120084304_add_activation_to_users.rb'
-    - 'db/migrate/20231122052851_add_reset_to_users.rb'
-    - 'db/migrate/20231129142850_create_relationships.rb'
+    - 'spec/models/micropost_spec.rb'
+    - 'spec/models/relationship_spec.rb'
+    - 'spec/models/user_spec.rb'
+    - 'spec/requests/microposts_spec.rb'
+    - 'spec/requests/relationships_spec.rb'
+    - 'spec/requests/sessions_spec.rb'
+    - 'spec/requests/users_spec.rb'
+  # Railsの推論されるテストタイプの規約から特定のテストファイルを除外します。
 
-# Rails/HelperInstanceVariable: ヘルパーファイル内でインスタンス変数を使用している場合に警告します。
+RSpec/RepeatedExample:
+  Exclude:
+    - 'spec/models/micropost_spec.rb'
+  # 繰り返されるテスト例に関する規約から特定のテストファイルを除外します。
+
+RSpec/SpecFilePathFormat:
+  Exclude:
+    - 'spec/requests/relationships_spec.rb'
+    - 'spec/requests/users_spec.rb'
+  # RSpecのファイルパス形式に関する規約から特定のテストファイルを除外します。
+
 Rails/HelperInstanceVariable:
   Exclude:
     - 'app/helpers/sessions_helper.rb'
+  # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外します。
 
-# Rails/InverseOf: `inverse_of`オプションが設定されていない場合に警告します。
+Rails/I18nLocaleTexts:
+  Exclude:
+    - 'app/controllers/account_activations_controller.rb'
+    - 'app/controllers/application_controller.rb'
+    - 'app/controllers/microposts_controller.rb'
+    - 'app/controllers/password_resets_controller.rb'
+    - 'app/controllers/sessions_controller.rb'
+    - 'app/controllers/users_controller.rb'
+    - 'app/mailers/user_mailer.rb'
+    - 'app/models/micropost.rb'
+  # I18nのロケールテキストに関するRailsの規約から特定のファイルを除外します。
+
 Rails/InverseOf:
   Exclude:
     - 'app/models/user.rb'
+  # belongs_to関連における`:inverse_of`の使用に関するRailsの規約から特定のモデルファイルを除外します。
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Exclude:
+    - 'app/models/micropost.rb'
+    - 'app/models/relationship.rb'
+  # belongs_to関連における不要なpresence: true検証を除外する。これらのモデルでは特定の理由でpresence: trueが必要。
 
-# Rails/SkipsModelValidations: モデルのバリデーションをスキップするメソッドを使用している場合に警告します。
 Rails/SkipsModelValidations:
   Exclude:
     - 'app/models/user.rb'
-    - 'minitest/helpers/sessions_helper_test.rb'
-    - 'minitest/integration/password_resets_test.rb'
+  # モデル検証をスキップするメソッドの使用を許可するファイルを指定。これらのファイルでは検証をスキップする操作が必要。
 
-# Style/ClassAndModuleChildren: クラスとモジュールの定義方法に関するスタイルガイドです。
-Style/ClassAndModuleChildren:
-  Exclude:
-    - 'minitest/channels/application_cable/connection_test.rb'
-    - 'minitest/test_helper.rb'
-
-# Style/CommentedKeyword: コメントアウトされたキーワード（例：`end`や`class`）を警告します。
 Style/CommentedKeyword:
   Exclude:
     - 'app/helpers/sessions_helper.rb'
+  # コメントされたキーワードの使用を許可するファイルを指定。sessions_helperでは特定の理由でコメントを使用。
 
-# Style/Documentation: 全てのクラスとモジュールの先頭にドキュメンテーションコメントが必要かどうかをチェックします。ここでは無効化されています。
-Style/Documentation:
-  Enabled: false
-
-
-# 文字列リテラルの冒頭での `# frozen_string_literal: true` のコメントを強制しない
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-# グローバル標準入出力($stdout, $stderr, $stdin)の使用を指摘するが、特定のファイルでは無視
 Style/GlobalStdStream:
   Exclude:
-    - 'config/environments/production.rb' # 本番環境の設定ファイル
-    - 'spec/rails_helper.rb' # RSpecの設定ファイル
+    - 'spec/rails_helper.rb'
+  # 標準出力や標準エラー出力のグローバル変数の使用を許可するファイルを指定。rails_helperではログ出力などで必要。
 
-# fetchメソッドにブロックを渡す際の冗長性を指摘するが、特定のファイルでは無視
-Style/RedundantFetchBlock:
-  Exclude:
-    - 'config/puma.rb' # Pumaの設定ファイル
-
-# 安全なナビゲーション演算子(&.)の使用を指摘するが、特定のファイルでは無視
 Style/SafeNavigation:
   Exclude:
-    - 'app/controllers/password_resets_controller.rb' # パスワードリセットコントローラ
-    - 'app/controllers/sessions_controller.rb' # セッションコントローラ
-    - 'app/helpers/sessions_helper.rb' # セッションヘルパー
+    - 'app/controllers/password_resets_controller.rb'
+    - 'app/controllers/sessions_controller.rb'
+    - 'app/helpers/sessions_helper.rb'
+  # セーフナビゲーション演算子の使用を許可するファイルを指定。これらのファイルではnilチェックを簡潔に行うために使用。
 
-# 文字列の連結に対する指摘を行うが、特定のファイルでは無視
+Style/SpecialGlobalVars:
+  EnforcedStyle: use_perl_names
+  # 特殊なグローバル変数の使用に関して、Perlスタイルの命名を推奨する。
+
 Style/StringConcatenation:
   Exclude:
-    - 'minitest/models/user_test.rb' # Userモデルのテスト
+    - 'minitest/models/user_test.rb'
+  # 文字列の連結に関する規約から特定のテストファイルを除外。user_testでは文字列連結がテストの要件になっている。
 
-# 1行あたりの最大文字数を134文字に設定
 Layout/LineLength:
-  Max: 134
-
+  Max: 198
+  # 1行あたりの最大文字数を198文字に設定。これにより、特定の長い行が許可される。
