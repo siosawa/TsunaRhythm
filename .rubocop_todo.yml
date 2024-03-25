@@ -1,7 +1,7 @@
-
 Metrics/AbcSize:
   Max: 18
   # メソッドのABCサイズの最大許容値を18に設定します。ABCサイズは、メソッドの複雑さを測定する指標です。
+  # sessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる
 
 Metrics/CyclomaticComplexity:
   Max: 9

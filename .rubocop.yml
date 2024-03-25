@@ -57,6 +57,7 @@ Style/FrozenStringLiteralComment:
 Metrics/AbcSize:
   Exclude:
     - "app/controllers/*"
+    # - "app/helpers/sessions_helper.rb" #current_userの可読性向上のため追記?
 
 # # bullet設定のため行数制限の対象外とする（デフォルト制限行数：25行/ブロック）
 # # テストは行数規定を除外
@@ -118,4 +119,3 @@ RSpec/InstanceVariable:
     - "spec/requests/microposts_spec.rb"
     - "spec/requests/users_spec.rb"
     - "spec/requests/relationships_spec.rb"
-
