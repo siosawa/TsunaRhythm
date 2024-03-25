@@ -16,8 +16,8 @@ module SessionsHelper
   end
 
   # 現在ログイン中のユーザーを返す（いる場合）
-  # AbcSize規定やCyclomaticComplexityに引っかかるがprivateメソッドを使って記述すると
-  # 可読性に影響がでるかも？どうしよう。
+  # AbcSize規定やCyclomaticComplexity、HelperInstanceVariableに引っかかるが
+  # privateメソッドを使って記述すると可読性に影響がでるかも？どうしよう。
 
   def current_user
     if (user_id = session[:user_id])
