@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sessions', type: :request do
+RSpec.describe 'Sessions' do
   let(:user) { create(:user) }
   let(:unregistered_user) { build(:user) }
 
@@ -29,15 +29,15 @@ RSpec.describe 'Sessions', type: :request do
       delete logout_path
     end
 
-    it 'ログアウトが成功し、ルートURLにリダイレクトされる' do
+    specify 'ログアウトが成功し、ルートURLにリダイレクトされる' do
       expect(response).to redirect_to(root_url)
     end
 
-    it 'ログアウトによりセッションがクリアされていることを確認' do
+    specify 'ログアウトによりセッションがクリアされていることを確認' do
       expect(session[:user_id]).to be_nil
     end
 
-    it 'ステータスコードが303(See Other)であることを確認' do
+    specify 'ステータスコードが303(See Other)であることを確認' do
       expect(response).to have_http_status(:see_other)
     end
   end

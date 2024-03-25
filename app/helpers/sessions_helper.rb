@@ -16,6 +16,9 @@ module SessionsHelper
   end
 
   # 現在ログイン中のユーザーを返す（いる場合）
+  # AbcSize規定やCyclomaticComplexity、HelperInstanceVariableに引っかかるが
+  # privateメソッドを使って記述すると可読性に影響がでるかも？どうしよう。
+
   def current_user
     if (user_id = session[:user_id])
       user = User.find_by(id: user_id)
@@ -29,23 +32,6 @@ module SessionsHelper
     end
   end
 
-  #  # 記憶トークンのcookieに対応するユーザーを返す
-  #  def current_user
-  #   if (user_id = session[:user_id])
-  #     user = User.find_by(id: user_id)
-  #     if user && session[:session_token] == user.session_token
-  #       @current_user = user
-  #     end
-  #   elsif (user_id = cookies.encrypted[:user_id])
-  #     user = User.find_by(id: user_id)
-  #     # if user && user.authenticated?(cookies[:remember_token])
-  #     if user && user.authenticated?(:remember, cookies[:remember_token])
-  #      log_in user
-  #       @current_user = user
-  #     end
-  #   end
-  # end
-
   # 渡されたユーザーがカレントユーザーであればtrueを返す
   def current_user?(user)
     user && user == current_user
@@ -55,12 +41,6 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
-
-  # # 現在のユーザーをログアウトする
-  # def log_out
-  #   reset_session
-  #   @current_user = nil   # 安全のため
-  # end
 
   # 永続的セッションを破棄する
   def forget(user)

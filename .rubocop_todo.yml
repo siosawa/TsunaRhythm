@@ -1,69 +1,36 @@
-
 Metrics/AbcSize:
   Max: 18
   # メソッドのABCサイズの最大許容値を18に設定します。ABCサイズは、メソッドの複雑さを測定する指標です。
+  # sessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
 Metrics/CyclomaticComplexity:
   Max: 9
   # メソッドの循環的複雑度の最大許容値を9に設定します。循環的複雑度は、コードの分岐点の数を測定する指標です。
-
-Metrics/MethodLength:
-  Max: 11
-  # メソッド内の最大行数を11に設定します。これは、メソッドが長すぎると読みにくくなるためです。
+  # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
 Metrics/PerceivedComplexity:
   Max: 11
   # メソッドの認知的複雑度の最大許容値を11に設定します。認知的複雑度は、人間がコードを理解するのに必要な労力の尺度です。
-
-RSpec/FilePath:
-  Exclude:
-    - 'spec/requests/relationships_spec.rb'
-    - 'spec/requests/users_spec.rb'
-  # RSpecのファイルパス規約から特定のテストファイルを除外します。
-
-RSpec/IndexedLet:
-  Exclude:
-    - 'spec/requests/microposts_spec.rb'
-    - 'spec/requests/users_spec.rb'
-  # letのインデックス付けに関する規約から特定のテストファイルを除外します。
-
-RSpec/Rails/InferredSpecType:
-  Exclude:
-    - 'spec/models/micropost_spec.rb'
-    - 'spec/models/relationship_spec.rb'
-    - 'spec/models/user_spec.rb'
-    - 'spec/requests/microposts_spec.rb'
-    - 'spec/requests/relationships_spec.rb'
-    - 'spec/requests/sessions_spec.rb'
-    - 'spec/requests/users_spec.rb'
-  # Railsの推論されるテストタイプの規約から特定のテストファイルを除外します。
-
-RSpec/RepeatedExample:
-  Exclude:
-    - 'spec/models/micropost_spec.rb'
-  # 繰り返されるテスト例に関する規約から特定のテストファイルを除外します。
-
-RSpec/SpecFilePathFormat:
-  Exclude:
-    - 'spec/requests/relationships_spec.rb'
-    - 'spec/requests/users_spec.rb'
-  # RSpecのファイルパス形式に関する規約から特定のテストファイルを除外します。
+  # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
+  # あとはsessions_controller.rbのcreateアクションの修正。
 
 Rails/HelperInstanceVariable:
   Exclude:
     - 'app/helpers/sessions_helper.rb'
   # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外します。
+  # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
+
 
 Rails/I18nLocaleTexts:
   Exclude:
-    - 'app/controllers/account_activations_controller.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/microposts_controller.rb'
-    - 'app/controllers/password_resets_controller.rb'
-    - 'app/controllers/sessions_controller.rb'
-    - 'app/controllers/users_controller.rb'
-    - 'app/mailers/user_mailer.rb'
-    - 'app/models/micropost.rb'
+    # - 'app/controllers/account_activations_controller.rb'
+    # - 'app/controllers/application_controller.rb'
+    # - 'app/controllers/microposts_controller.rb'
+    # - 'app/controllers/password_resets_controller.rb'
+    # - 'app/controllers/sessions_controller.rb'
+    # - 'app/controllers/users_controller.rb'
+    # - 'app/mailers/user_mailer.rb'
+    # - 'app/models/micropost.rb'
   # I18nのロケールテキストに関するRailsの規約から特定のファイルを除外します。
 
 Rails/InverseOf:

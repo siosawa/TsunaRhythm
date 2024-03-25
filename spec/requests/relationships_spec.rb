@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe RelationshipsController, type: :request do
+# RSpec/FilePath規定に引っかかるのでクラス名をRelationshipsControllerから"<request>Relationships"に変更
+RSpec.describe '<request>Relationships' do
   describe 'ログイン確認テスト' do
     let(:user) { create(:user) }
     let(:unregistered_user) { build(:user) }
@@ -28,7 +29,7 @@ RSpec.describe RelationshipsController, type: :request do
     let(:other_user) { create(:user) }
 
     context 'ログインしていない状態で' do
-      it 'フォローするとログイン画面にリダイレクトする' do
+      specify 'フォローするとログイン画面にリダイレクトする' do
         post relationships_path, params: { followed_id: other_user.id }
         expect(response).to redirect_to(login_path)
       end
@@ -40,7 +41,7 @@ RSpec.describe RelationshipsController, type: :request do
         post login_path, params: { session: session_params }
       end
 
-      it 'フォローするとRelationshipの数が1増える' do
+      specify 'フォローするとRelationshipの数が1増える' do
         expect do
           post relationships_path, params: { followed_id: other_user.id }
         end.to change(Relationship, :count).by(1)
@@ -59,14 +60,14 @@ RSpec.describe RelationshipsController, type: :request do
         @relationship = user.active_relationships.create(followed_id: other_user.id)
       end
 
-      it 'フォロー解除するとRelationshipの数が変わらない' do
+      specify 'フォロー解除するとRelationshipの数が変わらない' do
         expect do
           delete relationship_path(@relationship)
         end.not_to change(Relationship, :count)
         expect(response).to redirect_to(login_path)
       end
 
-      it 'フォロー解除すると失敗し、ログイン画面にリダイレクトする' do
+      specify 'フォロー解除すると失敗し、ログイン画面にリダイレクトする' do
         delete relationship_path(@relationship)
         expect(response).to redirect_to(login_path)
       end
@@ -79,7 +80,7 @@ RSpec.describe RelationshipsController, type: :request do
         @relationship = user.active_relationships.create(followed_id: other_user.id)
       end
 
-      it 'フォロー解除をするとRelationshipの数が1減少する' do
+      specify 'フォロー解除をするとRelationshipの数が1減少する' do
         expect do
           delete relationship_path(@relationship)
         end.to change(Relationship, :count).by(-1)

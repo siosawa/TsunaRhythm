@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe User do
   let(:user) { build(:user) }
   let(:other_user) { create(:user) } # ユーザー削除テストもするのでcreateを使う
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Micropost, type: :model do
+RSpec.describe Micropost do
   let(:user) { create(:user) }
   let(:micropost) { create(:micropost) }
 
@@ -14,17 +14,12 @@ RSpec.describe Micropost, type: :model do
       expect(micropost).not_to be_valid
     end
 
-    specify 'contentが存在しない場合は無効になる' do
+    specify 'のcontentが空の時は無効になる' do
       micropost.content = ''
       expect(micropost).not_to be_valid
     end
 
-    it 'のcontentが空の時は無効になる' do
-      micropost.content = ''
-      expect(micropost).not_to be_valid
-    end
-
-    it 'のcontentが140字を超えた時は無効になる' do
+    specify 'のcontentが140字を超えた時は無効になる' do
       micropost.content = Faker::Lorem.characters(number: 141)
       expect(micropost).not_to be_valid
     end
