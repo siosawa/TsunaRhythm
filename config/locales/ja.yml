@@ -5,7 +5,6 @@ ja:
       tsunarhythm: つなリズム
       micropst: マイクロポスト
       comment: コメント
-      community: コミュニティ
     attributes:
       user:
         id: ユーザーID
@@ -24,7 +23,7 @@ ja:
       comment:
         id: コメントID
         user_id: 作成ユーザーID
-        gadget_id: コメント先ガジェットID
+        tsunarhythm_id: コメント先ガジェットID
         content: コメント内容
         parent_id: リプライ先コメントID
       community:
@@ -64,7 +63,7 @@ ja:
     destroy:
       flash:
         success: "コミュニティが削除されました"
-  gadgets:
+  tsunarhythm:
     create:
       flash:
         success: "登録が完了しました"
@@ -74,7 +73,7 @@ ja:
     destroy:
       flash:
         success: "投稿が削除されました"
-  tweets:
+  tsunarhythm:
     create:
       flash:
         success: "投稿が完了しました"
@@ -92,7 +91,7 @@ ja:
       flash:
         success: "退会処理が完了しました。ご利用ありがとうございました。"
     other:
-      guest_user: "ゲストユーザーの編集・削除はできません"
+      tsunarhythm_user: "ゲストユーザーの編集・削除はできません"
   relationships:
     create:
       flash:
