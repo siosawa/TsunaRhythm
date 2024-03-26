@@ -29,6 +29,7 @@ Rails/SkipsModelValidations:
   Exclude:
     - "app/models/user.rb"
 
+# インスタンス変数を許可
 Rails/HelperInstanceVariable:
   Exclude:
     - "app/helpers/sessions_helper.rb"
