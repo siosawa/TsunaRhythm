@@ -1,5 +1,10 @@
 FROM ruby:3.2.2
-RUN apt-get update -qq && apt-get install -y nodejs default-libmysqlclient-dev
+# Node.jsとnpmをインストール
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get update -qq && \
+    apt-get install -y nodejs && \
+    npm install -g npm@latest
+# RUN apt-get update -qq && apt-get install -y nodejs default-libmysqlclient-dev
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
@@ -9,6 +14,8 @@ COPY . /app
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
+# Jestのインストール
+RUN npm install --save-dev jest
 EXPOSE 3000
 CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
 
