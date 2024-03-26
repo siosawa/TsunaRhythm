@@ -23,17 +23,16 @@ ja:
       comment:
         id: コメントID
         user_id: 作成ユーザーID
-        tsunarhythm_id: コメント先ガジェットID
+        tsunarhythm_id: コメント先つなリズムID
         content: コメント内容
         parent_id: リプライ先コメントID
-      community:
-        id: コミュニティID
-        user_id: 作成ユーザーID
-        name: コミュニティ名
-        image: コミュニティ画像
-      created_at: 作成日
-      updated_at: 更新日
     errors:
+      models:
+        user:
+          attributes:
+            image:
+            content_type_invalid: "有効な画像形式である必要があります（jpeg, gif, png）"
+            size_too_big: 5MB未満である必要があります
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
         restrict_dependent_destroy:
@@ -53,16 +52,6 @@ ja:
         danger: "現在ゲストログインはご利用いただけません。通常ログインまたは新規登録をご利用ください。"
     flash:
       danger: "ログインしてください"
-  communities:
-    create:
-      flash:
-        success: "新しいコミュニティが登録されました"
-    update:
-      flash:
-        success: "更新されました"
-    destroy:
-      flash:
-        success: "コミュニティが削除されました"
   tsunarhythm:
     create:
       flash:
@@ -90,6 +79,7 @@ ja:
     destroy:
       flash:
         success: "退会処理が完了しました。ご利用ありがとうございました。"
+        danger: "退会処理が失敗しました。"
     other:
       tsunarhythm_user: "ゲストユーザーの編集・削除はできません"
   relationships:
@@ -108,6 +98,10 @@ ja:
         success: "投稿を削除しました"
   common:
     correct_user: "この操作は実行できません"
+  password:
+    reset: "パスワードはリセットされました"
+  account: 
+    activation: "アカウントを有効化してください"
   date:
     abbr_day_names:
       - 日

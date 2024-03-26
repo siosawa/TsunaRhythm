@@ -49,7 +49,7 @@ class MicropostsController < ApplicationController
       Rails.logger.info 'ログイン済みユーザーによるアクセスが確認されました。'
     else
       Rails.logger.info '未ログインユーザーがログインが必要なページにアクセスしようとしました。login_pathへリダイレクトします。'
-      flash[:danger] = 'ログインしてください'
+      flash[:danger] = t('sessions.flash.danger')
       redirect_to login_path
     end
   end

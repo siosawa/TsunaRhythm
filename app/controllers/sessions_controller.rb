@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
     else
       Rails.logger.info 'メールアドレスとパスワードの組み合わせが無効です。エラーメッセージを設定し、ログインフォームを再度表示します。'
 
-      flash.now[:danger] = 'メールアドレスとパスワードの組み合わせが無効です。'
+      flash.now[:danger] = 'Invalid email address/password combination.'
       render 'new', status: :unprocessable_entity
     end
 
