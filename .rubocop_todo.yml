@@ -1,23 +1,23 @@
 Metrics/AbcSize:
   Max: 18
-  # メソッドのABCサイズの最大許容値を18に設定します。ABCサイズは、メソッドの複雑さを測定する指標です。
+  # メソッドのABCサイズの最大許容値を18に設定。ABCサイズは、メソッドの複雑さを測定する指標。
   # sessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
 Metrics/CyclomaticComplexity:
   Max: 9
-  # メソッドの循環的複雑度の最大許容値を9に設定します。循環的複雑度は、コードの分岐点の数を測定する指標です。
+  # メソッドの循環的複雑度の最大許容値を9に設定。循環的複雑度は、コードの分岐点の数を測定する指標。
   # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
 Metrics/PerceivedComplexity:
   Max: 11
-  # メソッドの認知的複雑度の最大許容値を11に設定します。認知的複雑度は、人間がコードを理解するのに必要な労力の尺度です。
+  # メソッドの認知的複雑度の最大許容値を11に設定。認知的複雑度は、人間がコードを理解するのに必要な労力の尺度。
   # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
   # あとはsessions_controller.rbのcreateアクションの修正。
 
 Rails/HelperInstanceVariable:
   Exclude:
     - 'app/helpers/sessions_helper.rb'
-  # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外します。
+  # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外。
   # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
 Rails/RedundantPresenceValidationOnBelongsTo:
@@ -32,7 +32,3 @@ Rails/SkipsModelValidations:
     - 'app/models/user.rb'
   # モデル検証をスキップするメソッドの使用を許可するファイルを指定。これらのファイルでは検証をスキップする操作が必要。
   # おそらくuptate_attributeの記述をなくしてファイルを完結させれば解決する
-
-Layout/LineLength:
-  Max: 198
-  # 1行あたりの最大文字数を198文字に設定。これにより、特定の長い行が許可される。
