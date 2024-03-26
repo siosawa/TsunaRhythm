@@ -20,47 +20,18 @@ Rails/HelperInstanceVariable:
   # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外します。
   # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
-Rails/InverseOf:
-  Exclude:
-    # - 'app/models/user.rb'
-  # belongs_to関連における`:inverse_of`の使用に関するRailsの規約から特定のモデルファイルを除外します。
-  
 Rails/RedundantPresenceValidationOnBelongsTo:
   Exclude:
-    - 'app/models/micropost.rb'
     - 'app/models/relationship.rb'
-  # belongs_to関連における不要なpresence: true検証を除外する。これらのモデルでは特定の理由でpresence: trueが必要。
+  # models/relationship.rbでpresence: true検証を除外するとrubocopをパスするが、
+  # 今度はrelationship_specのfollowerd_idが存在しない時のテストと、follower_idが存在しない時の
+  # テストが失敗する。バリデーションを行うタイミングが変わる・・・？
 
 Rails/SkipsModelValidations:
   Exclude:
     - 'app/models/user.rb'
   # モデル検証をスキップするメソッドの使用を許可するファイルを指定。これらのファイルでは検証をスキップする操作が必要。
-
-Style/CommentedKeyword:
-  Exclude:
-    - 'app/helpers/sessions_helper.rb'
-  # コメントされたキーワードの使用を許可するファイルを指定。sessions_helperでは特定の理由でコメントを使用。
-
-Style/GlobalStdStream:
-  Exclude:
-    - 'spec/rails_helper.rb'
-  # 標準出力や標準エラー出力のグローバル変数の使用を許可するファイルを指定。rails_helperではログ出力などで必要。
-
-Style/SafeNavigation:
-  Exclude:
-    - 'app/controllers/password_resets_controller.rb'
-    - 'app/controllers/sessions_controller.rb'
-    - 'app/helpers/sessions_helper.rb'
-  # セーフナビゲーション演算子の使用を許可するファイルを指定。これらのファイルではnilチェックを簡潔に行うために使用。
-
-Style/SpecialGlobalVars:
-  EnforcedStyle: use_perl_names
-  # 特殊なグローバル変数の使用に関して、Perlスタイルの命名を推奨する。
-
-Style/StringConcatenation:
-  Exclude:
-    - 'minitest/models/user_test.rb'
-  # 文字列の連結に関する規約から特定のテストファイルを除外。user_testでは文字列連結がテストの要件になっている。
+  # おそらくuptate_attributeの記述をなくしてファイルを完結させれば解決する
 
 Layout/LineLength:
   Max: 198

@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       Rails.logger.info '指定されたメールアドレスのユーザーが見つかりませんでした。'
     end
 
-    if user && user.authenticate(params[:session][:password])
+    if user&.authenticate(params[:session][:password])
       Rails.logger.info 'パスワードが正しいことが確認されました。'
 
       if user.activated?
