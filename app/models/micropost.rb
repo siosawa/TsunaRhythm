@@ -6,8 +6,12 @@ class Micropost < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
-  validates :image,   content_type: { in: %w[image/jpeg image/gif image/png],
-                                      message: I18n.t('activerecord.errors.models.user.attributes.image.content_type_invalid') },
-                      size: { less_than: 5.megabytes,
-                              message: I18n.t('activerecord.errors.models.user.attributes.image.size_too_big') }
+  validates :image, content_type: {
+                      in: %w[image/jpeg image/gif image/png],
+                      message: -> { I18n.t('activerecord.errors.messages.image_type') }
+                    },
+                    size: {
+                      less_than: 5.megabytes,
+                      message: -> { I18n.t('activerecord.errors.messages.image_size') }
+                    }
 end

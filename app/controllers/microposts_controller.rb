@@ -7,7 +7,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     @micropost.image.attach(params[:micropost][:image])
     if @micropost.save
-      flash[:success] = 'Micropost created!'
+      flash[:success] = I18n.t('microposts.create.flash.success')
       redirect_to post_path
       Rails.logger.info "マイクロポストが作成されました。ユーザーID: #{current_user.id}, マイクロポスト内容: #{@micropost.content}"
     else
@@ -20,7 +20,7 @@ class MicropostsController < ApplicationController
   def destroy
     micropost_content = @micropost.content # ログ出力のため一時保存
     @micropost.destroy
-    flash[:success] = 'Micropost deleted'
+    flash[:success] = I18n.t('microposts.destroy.flash.success')
     Rails.logger.info "マイクロポストが削除されました。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"
     if request.referer.nil?
       Rails.logger.info "リファラーが存在しないため、ルートURLにリダイレクトします。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"
@@ -49,7 +49,7 @@ class MicropostsController < ApplicationController
       Rails.logger.info 'ログイン済みユーザーによるアクセスが確認されました。'
     else
       Rails.logger.info '未ログインユーザーがログインが必要なページにアクセスしようとしました。login_pathへリダイレクトします。'
-      flash[:danger] = t('sessions.flash.danger')
+      flash[:danger] = I18n.t('sessions.flash.danger')
       redirect_to login_path
     end
   end
