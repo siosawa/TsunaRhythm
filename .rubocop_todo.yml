@@ -1,7 +1,3 @@
-Metrics/AbcSize:
-  Max: 18
-  # メソッドのABCサイズの最大許容値を18に設定。ABCサイズは、メソッドの複雑さを測定する指標。
-  # sessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
 Metrics/CyclomaticComplexity:
   Max: 9
@@ -14,21 +10,9 @@ Metrics/PerceivedComplexity:
   # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
   # あとはsessions_controller.rbのcreateアクションの修正。
 
-Rails/HelperInstanceVariable:
-  Exclude:
-    - 'app/helpers/sessions_helper.rb'
-  # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外。
-  # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
-
 Rails/RedundantPresenceValidationOnBelongsTo:
   Exclude:
     - 'app/models/relationship.rb'
   # models/relationship.rbでpresence: true検証を除外するとrubocopをパスするが、
   # 今度はrelationship_specのfollowerd_idが存在しない時のテストと、follower_idが存在しない時の
   # テストが失敗する。バリデーションを行うタイミングが変わる・・・？
-
-Rails/SkipsModelValidations:
-  Exclude:
-    - 'app/models/user.rb'
-  # モデル検証をスキップするメソッドの使用を許可するファイルを指定。これらのファイルでは検証をスキップする操作が必要。
-  # おそらくuptate_attributeの記述をなくしてファイルを完結させれば解決する
