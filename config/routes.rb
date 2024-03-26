@@ -1,18 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-  # get 'users/new'
   root 'static_pages#home'
-  # get /about => static_pages#home
-  # get 'static_pages/home'
-  # get 'static_pages/help'
-  # get 'static_pages/about'
-  # get 'static_pages/salt'
-  # get 'static_pages/contact'
 
-  get  '/help',        to: 'static_pages#help'
-  # これでhelp_pathが指定した名前になる
-  get  '/about',       to: 'static_pages#about'
-  get  '/contact',     to: 'static_pages#contact'
   get  '/roomlist',    to: 'static_pages#roomlist'
   get  '/post',        to: 'static_pages#post'
   get  '/dashboard',   to: 'static_pages#dashboard'

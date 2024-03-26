@@ -8,21 +8,12 @@
       つなリズムへようこそ！
       <!-- 実際のウェブページのタイトルまたはウェルカムメッセージ -->
     </h1>
-    <h2> <!-- h2タグは、h1よりも少し小さい見出しで、関連するサブヘディングや情報を示す -->
-      このホームページのリンクは
-      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a> 
-      <!-- "a"タグでRuby on Railsチュートリアルのウェブサイトへのハイパーリンクを作成 -->
-      で作成されています。
-    </h2>
     <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %> 
     <!-- ERB構文でRubyのlink_toヘルパーメソッドを使用。"Sign up now!"のテキストでボタンを作り、
     そのクラスには"btn", "btn-lg", "btn-primary"を指定している（Bootstrapのクラス） -->
     <%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary" %> 
     <%= link_to "お試しログイン", login_path, class: "btn btn-lg btn-primary" %> 
-    <%= link_to "Googleアカウントで登録", login_path, class: "btn btn-lg btn-primary" %> 
-
 </div>
-
 <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
      "https://rubyonrails.org/" %> 
      <!-- ERB構文を使用し、link_toヘルパーとimage_tagヘルパーを組み合わせて画像リンクを作成。

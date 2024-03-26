@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
     else
       Rails.logger.info 'メールアドレスとパスワードの組み合わせが無効です。エラーメッセージを設定し、ログインフォームを再度表示します。'
 
-      flash.now[:danger] = I18n.t('sessions.create.flash.success')
+      flash.now[:danger] = I18n.t('sessions.create.flash.danger')
       render 'new', status: :unprocessable_entity
     end
 

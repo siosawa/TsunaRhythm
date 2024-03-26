@@ -1,9 +1,13 @@
-<h1>つなリズム</h1>
+<h1>つなリズム/TsunaRhythm</h1>
 
-<p>Hi <%= @user.name %>,</p>
+<p>こんにちは/Hello<%= @user.name %>,</p>
 
 <p>
-Welcome to the Sample App! Click on the link below to activate your account:
+つなリズムへようこそ! アカウントを有効にするには、下のリンクをクリックしてください。
+</p>
+
+<p>
+Welcome to TsunaRhythm! To activate your account, please click the link below.
 </p>
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
