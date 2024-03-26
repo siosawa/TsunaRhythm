@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     if @user.save
       Rails.logger.info "ユーザー(ID: #{@user.id})が正常に保存されました。アクティベーションメールを送信します。"
       @user.send_activation_email
-      flash[:info] = 'アカウントを有効にするには、メールを確認してください。'
+      flash[:info] = I18n.t('users.create.flash.activation_instruction')
       redirect_to root_url
     else
       Rails.logger.warn 'ユーザーの保存に失敗しました。ユーザー作成フォームを再表示します。'
@@ -52,21 +52,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(user_params)
       Rails.logger.info 'ユーザー情報の更新に成功しました。'
-      flash[:success] = 'プロフィールをアップデートしました'
+      flash[:success] = I18n.t('users.update.flash.success')
       redirect_to @user
     else
       Rails.logger.info 'ユーザー情報の更新に失敗しました。'
+      flash[:alert] = I18n.t('users.update.flash.danger')
       render 'edit', status: :unprocessable_entity
     end
   end
-
-  # def destroy
-  #   Rails.logger.info "users_controllerのdestroyアクションを実行しようとしています"
-  #   User.find(params[:id]).destroy
-  #   Rails.logger.info "ユーザーを削除しました。"
-  #   flash[:success] = "ユーザーを削除しました"
-  #   redirect_to users_url, status: :see_other
-  # end
 
   def destroy
     Rails.logger.info 'users_controllerのdestroyアクションを実行しようとしています'
@@ -74,16 +67,16 @@ class UsersController < ApplicationController
 
     if user.nil?
       Rails.logger.info 'ユーザーが見つかりませんでした。'
-      flash[:alert] = 'ユーザーが見つかりませんでした。'
+      flash[:alert] = I18n.t('users.destroy.flash.not_found')
       redirect_to users_url and return
     end
 
     if user.destroy
       Rails.logger.info 'ユーザーを削除しました。'
-      flash[:success] = 'ユーザーを削除しました。'
+      flash[:success] = I18n.t('users.destroy.flash.success')
     else
       Rails.logger.info 'ユーザーの削除に失敗しました。'
-      flash[:alert] = 'ユーザーの削除に失敗しました。'
+      flash[:alert] = I18n.t('users.destroy.flash.danger')
     end
 
     redirect_to users_url, status: :see_other

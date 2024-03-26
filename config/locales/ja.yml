@@ -26,19 +26,17 @@ ja:
         tsunarhythm_id: コメント先ガジェットID
         content: コメント内容
         parent_id: リプライ先コメントID
-      community:
-        id: コミュニティID
-        user_id: 作成ユーザーID
-        name: コミュニティ名
-        image: コミュニティ画像
       created_at: 作成日
       updated_at: 更新日
     errors:
       messages:
+        image_type: "有効な画像形式である必要があります(jpeg,gif,png)"
+        image_size: "5MB未満である必要があります"
         record_invalid: "バリデーションに失敗しました: %{errors}"
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+
   sessions:
     create:
       flash:
@@ -53,16 +51,14 @@ ja:
         danger: "現在ゲストログインはご利用いただけません。通常ログインまたは新規登録をご利用ください。"
     flash:
       danger: "ログインしてください"
-  communities:
-    create:
-      flash:
-        success: "新しいコミュニティが登録されました"
-    update:
-      flash:
-        success: "更新されました"
-    destroy:
-      flash:
-        success: "コミュニティが削除されました"
+
+  mailers:
+    user_mailer:
+      account_activation:
+        subject: "アカウントの有効化"
+      password_reset:
+        subject: "パスワードのリセット"
+
   tsunarhythm:
     create:
       flash:
@@ -73,25 +69,32 @@ ja:
     destroy:
       flash:
         success: "投稿が削除されました"
-  tsunarhythm:
+
+  microposts:
     create:
       flash:
         success: "投稿が完了しました"
     destroy:
       flash:
         success: "投稿を削除しました"
+
   users:
     create:
       flash:
-        success: "Tsunarhythmへようこそ!"
+        activation_instruction: "アカウントを有効にするには、メールを確認してください"
+        danger: "ユーザーの保存に失敗しました。ユーザー作成フォームを再表示します"
     update:
       flash:
-        success: "更新されました"
+        success: "ユーザー情報の更新に成功しました"
+        danger: "ユーザー情報の更新に失敗しました"
     destroy:
       flash:
-        success: "退会処理が完了しました。ご利用ありがとうございました。"
+        not_found: "ユーザーが見つかりませんでした。"
+        success: "ユーザーを削除しました。ご利用ありがとうございました。"
+        danger: "ユーザーの削除に失敗しました"
     other:
       tsunarhythm_user: "ゲストユーザーの編集・削除はできません"
+
   relationships:
     create:
       flash:
@@ -99,6 +102,19 @@ ja:
     destroy:
       flash:
         success: "フォローを解除しました"
+
+  password_resets:
+    check_expriration: 
+      flash:
+        disabled: "パスワードのリセットの有効期限が切れました"
+    create:
+      flash: 
+        success: "パスワードのリセット手順が記載されたメールが送信されました"
+        danger: "Eメールアドレスが見つかりませんでした"
+    update:
+      flash:
+        success: "パスワードが更新されました"
+      empty_password: "パスワードが空です"
   comments:
     create:
       flash:
@@ -106,8 +122,15 @@ ja:
     destroy:
       flash:
         success: "投稿を削除しました"
+
+  account_activations:
+    edit:
+      success: "アカウントを有効化しました！"
+      danger: "無効なアクティベーションリンクです"
+
   common:
     correct_user: "この操作は実行できません"
+
   date:
     abbr_day_names:
       - 日
