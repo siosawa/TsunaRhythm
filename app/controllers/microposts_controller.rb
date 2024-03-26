@@ -19,15 +19,14 @@ class MicropostsController < ApplicationController
 
   def destroy
     # ログ出力のため一時保存
-    micropost_content = @micropost.content
     @micropost.destroy
     flash[:success] = I18n.t('microposts.destroy.flash.success')
-    Rails.logger.info "マイクロポストが削除されました。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"
+    Rails.logger.info "マイクロポストが削除されました。ユーザーID: #{current_user.id}"
     if request.referer.nil?
-      Rails.logger.info "リファラーが存在しないため、ルートURLにリダイレクトします。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"
+      Rails.logger.info "リファラーが存在しないため、ルートURLにリダイレクトします。ユーザーID: #{current_user.id}"
       redirect_to root_url, status: :see_other
     else
-      Rails.logger.info "前のページ（リファラー: #{request.referer}）にリダイレクトします。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"
+      Rails.logger.info "前のページ（リファラー: #{request.referer}）にリダイレクトします。ユーザーID: #{current_user.id}"
       redirect_to request.referer, status: :see_other
     end
   end
