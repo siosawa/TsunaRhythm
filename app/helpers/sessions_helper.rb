@@ -8,7 +8,8 @@ module SessionsHelper
   end
 
   # 永続的セッションのためにユーザーをデータベースに記憶する
-  def remember(user) # 引数が必ず必要な方のrememberメソッド
+  # 引数が必ず必要な方のrememberメソッド
+  def remember(user)
     user.remember
     cookies.permanent.encrypted[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
@@ -18,14 +19,13 @@ module SessionsHelper
   # 現在ログイン中のユーザーを返す（いる場合）
   # AbcSize規定やCyclomaticComplexity、HelperInstanceVariableに引っかかるが
   # privateメソッドを使って記述すると可読性に影響がでるかも？どうしよう。
-
   def current_user
     if (user_id = session[:user_id])
       user = User.find_by(id: user_id)
       @current_user ||= user if user && session[:session_token] == user.session_token
     elsif (user_id = cookies.encrypted[:user_id])
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(:remember, cookies[:remember_token])
+      if user&.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end

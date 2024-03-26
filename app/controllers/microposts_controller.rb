@@ -18,7 +18,8 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
-    micropost_content = @micropost.content # ログ出力のため一時保存
+    # ログ出力のため一時保存
+    micropost_content = @micropost.content
     @micropost.destroy
     flash[:success] = I18n.t('microposts.destroy.flash.success')
     Rails.logger.info "マイクロポストが削除されました。ユーザーID: #{current_user.id}, 削除されたマイクロポストの内容: #{micropost_content}"

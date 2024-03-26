@@ -1,28 +1,36 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
+
   has_many :active_relationships, class_name: 'Relationship',
                                   foreign_key: 'follower_id',
-                                  dependent: :destroy
+                                  dependent: :destroy,
+                                  inverse_of: :follower
+
   has_many :passive_relationships, class_name: 'Relationship',
                                    foreign_key: 'followed_id',
-                                   dependent: :destroy
-  has_many :following, through: :active_relationships, source: :followed
-  has_many :followers, through: :passive_relationships, source: :follower
+                                   dependent: :destroy,
+                                   inverse_of: :followed
 
-  attr_accessor :remember_token, :activation_token, :reset_token
+  has_many :following, through: :active_relationships, source: :followed
+
+  has_many :followers, through: :passive_relationships, source: :follower
 
   # データベースと連携しない、インスタンス変数とほぼ同義のremember_tokenを作成する
   # メソッドを作るメソッド（メタメソッド）を作成する
-  # before_save { self.email = self.email.downcase}
-  before_save   :downcase_email
+  attr_accessor :remember_token, :activation_token, :reset_token
+
   # アカウントを追加する直前に行う。渡したメールアドレスを小文字にしたものをセーブする直前に自分自身にコピーする
   # 大文字と小文字で複数メールアドレスを登録できないようにする。大抵のデータベースでは必要ない。
+  before_save   :downcase_email
+
   # 前提を作り上げる
   before_create :create_activation_digest # からのインスタンスがデータに保存された時。バリデーションを通過したとき。
   validates :name,  presence: true, length: { maximum: 50 }
+
   # nameに空白スペースがあるかを検証する。空白スペースがなければtrue
   validates :email, presence: true, length: { maximum: 255 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
   # 大文字は定数（動的に変更されることのない値）として扱われる。
   validates :email, presence: true, length:     { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
@@ -52,18 +60,10 @@ class User < ApplicationRecord
     remember_digest
   end
 
-  # セッションハイジャック防止のためにセッショントークンを返す
-  # この記憶ダイジェストを再利用しているのは単に利便性のため
+  # セッションハイジャック防止のためにセッショントークンを返す(記憶ダイジェストを再利用しているのは単に利便性のため)
   def session_token
     remember_digest || remember
   end
-
-  # # 渡されたトークンがダイジェストと一致したらtrueを返す
-  # def authenticated?(remember_token)
-  #   return false if remember_digest.nil?
-  #   #returnを先に書くことでこの処理がされなかった時次の処理を行わないようにする。
-  #   BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  # end
 
   # 渡されたトークンがダイジェストと一致したらtrueを返す
   def authenticated?(attribute, token)
@@ -106,8 +106,6 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-  # 試作feedの定義
-  # 完全な実装は次章の「ユーザーをフォローする」を参照
   # ユーザーのステータスフィードを返す
   def feed
     following_ids = "SELECT followed_id FROM relationships
