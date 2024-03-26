@@ -20,23 +20,11 @@ Rails/HelperInstanceVariable:
   # ヘルパー内のインスタンス変数の使用に関するRailsの規約から特定のヘルパーファイルを除外します。
   # これもsessions_helper.rbのcurrent_userメソッドを修正することでおそらく改善できる。
 
-
-Rails/I18nLocaleTexts:
-  Exclude:
-    # - 'app/controllers/account_activations_controller.rb'
-    # - 'app/controllers/application_controller.rb'
-    # - 'app/controllers/microposts_controller.rb'
-    # - 'app/controllers/password_resets_controller.rb'
-    # - 'app/controllers/sessions_controller.rb'
-    # - 'app/controllers/users_controller.rb'
-    # - 'app/mailers/user_mailer.rb'
-    # - 'app/models/micropost.rb'
-  # I18nのロケールテキストに関するRailsの規約から特定のファイルを除外します。
-
 Rails/InverseOf:
   Exclude:
-    - 'app/models/user.rb'
+    # - 'app/models/user.rb'
   # belongs_to関連における`:inverse_of`の使用に関するRailsの規約から特定のモデルファイルを除外します。
+  
 Rails/RedundantPresenceValidationOnBelongsTo:
   Exclude:
     - 'app/models/micropost.rb'
