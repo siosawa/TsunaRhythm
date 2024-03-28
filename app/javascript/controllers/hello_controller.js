@@ -1,7 +1,8 @@
-import { Controller } from '@hotwired/stimulus';
+// おそらく必要ないファイル
+// // import { Controller } from '@hotwired/stimulus';
 
-export default class extends Controller {
-  connect() {
-    this.element.textContent = 'Hello World!';
-  }
-}
+// // export default class extends Controller {
+// //   connect() {
+// //     this.element.textContent = 'Hello World!';
+// //   }
+// // }

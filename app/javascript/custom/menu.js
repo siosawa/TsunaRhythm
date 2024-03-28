@@ -1,4 +1,4 @@
-// トグルリスナーを追加してクリックをリッスンする
+//ハンバーガーメニューの動的な設定をしている
 document.addEventListener('turbo:load', () => {
   const hamburger = document.querySelector('#hamburger');
   hamburger.addEventListener('click', (event) => {
