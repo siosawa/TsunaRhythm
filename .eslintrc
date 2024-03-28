@@ -1,22 +1,21 @@
 {
     "env": {
-        "browser": true, 
-        "node": true, 
-        "es6": true 
-    } ,
-    "parserOptions":{
-        "ecmaVersion": "latest",
-        "sourceType": "module"    
+        "browser": true,
+        "node": true,
+        "es6": true
     },
-    "rules":{
-        "no-console": ["off"] ,
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
         // "indent": ["error", 2],
         // "quotes": ["error","single"],
         // "semi": ["error","always"],
-        "no-unused-vars": ["off"],
+        // "no-unused-vars": ["off"],
         // "camelcase": ["warn"]
         // "linebreak-style": ["off"]
-    },
-    "extends": ["airbnb-base"]
+    }
+    // "extends": ["airbnb-base"]
 }
 // AirbnbのESlintがおすすめ

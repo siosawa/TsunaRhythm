@@ -8,7 +8,7 @@
     "lint": "eslint app.js",
     "fix": "eslint --fix app.js",
     "format": "prettier --write app.js",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -28,9 +28,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.24.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-react": "^7.34.1",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.6.2",
