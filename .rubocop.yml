@@ -14,15 +14,15 @@ AllCops:
   DisplayCopNames: true
   # 自動生成されるファイルは基本的に除外
   Exclude:
-    - "vendor/**/*"
-    - "db/**/*"
-    - "config/**/*"
-    - "public/**/*"
-    - "log/**/*"
-    - "tmp/**/*"
-    - "bin/*"
-    - "config/environments/*"
-    - "config/puma.rb"
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'public/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'bin/*'
+    - 'config/environments/*'
+    - 'config/puma.rb'
 
 # ドキュメントの無い public class を許可する
 Style/Documentation:
@@ -35,52 +35,52 @@ Style/FrozenStringLiteralComment:
 # ユーザーパスワードとパスワード確認のバリデーションをスキップする必要があるため、update_attributeの使用を許可
 Rails/SkipsModelValidations:
   Exclude:
-    - "app/models/user.rb"
+    - 'app/models/user.rb'
 
 # インスタンス変数を許可
 Rails/HelperInstanceVariable:
   Exclude:
-    - "app/helpers/sessions_helper.rb"
+    - 'app/helpers/sessions_helper.rb'
 
 # Abc Sizeがデフォルト値以上のcontrollerを例外として許可（デフォルトAbc Size:15）
 Metrics/AbcSize:
   Exclude:
-    - "app/controllers/*"
-    - "app/helpers/sessions_helper.rb" #current_userの可読性向上のため追記
+    - 'app/controllers/*'
+    - 'app/helpers/sessions_helper.rb' #current_userの可読性向上のため追記
 
 # コントローラと一部モデル、ヘルパーはメソッド行数が11行以上でも許可する
 Metrics/MethodLength:
   Exclude:
-    - "app/controllers/*"
+    - 'app/controllers/*'
 
 # テストは行数規定を除外
 RSpec/ExampleLength:
   Exclude:
-    - "spec/models/micropost_spec.rb"
-    - "spec/models/relationship_spec.rb"
-    - "spec/models/user_spec.rb"
-    - "spec/requests/users_spec.rb"
-    - "spec/requests/relationships_spec.rb"
-    - "spec/requests/sessions_spec.rb"
-    - "spec/requests/microposts_spec.rb"
+    - 'spec/models/micropost_spec.rb'
+    - 'spec/models/relationship_spec.rb'
+    - 'spec/models/user_spec.rb'
+    - 'spec/requests/users_spec.rb'
+    - 'spec/requests/relationships_spec.rb'
+    - 'spec/requests/sessions_spec.rb'
+    - 'spec/requests/microposts_spec.rb'
 
 # テスト文言は日本語とするため除外
 RSpec/ContextWording:
   Exclude:
-    - "spec/requests/*.rb"
+    - 'spec/requests/*.rb'
 
 # request specは複数のexpectationsを許可する
 RSpec/MultipleExpectations:
   Exclude:
-    - "spec/requests/*.rb"
+    - 'spec/requests/*.rb'
 
 # ネストを許可
 RSpec/NestedGroups:
   Exclude:
-    - "spec/requests/users_spec.rb"
+    - 'spec/requests/users_spec.rb'
 
 # インスタンス変数を許可
 RSpec/InstanceVariable:
   Exclude:
-    - "spec/requests/microposts_spec.rb"
-    - "spec/requests/relationships_spec.rb"
+    - 'spec/requests/microposts_spec.rb'
+    - 'spec/requests/relationships_spec.rb'

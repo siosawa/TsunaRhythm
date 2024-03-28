@@ -1,18 +1,18 @@
 // メニュー操作
 
 // トグルリスナーを追加してクリックをリッスンする
-document.addEventListener("turbo:load", function () {
-  let hamburger = document.querySelector("#hamburger");
-  hamburger.addEventListener("click", function (event) {
+document.addEventListener('turbo:load', () => {
+  const hamburger = document.querySelector('#hamburger');
+  hamburger.addEventListener('click', (event) => {
     event.preventDefault();
-    let menu = document.querySelector("#navbar-menu");
-    menu.classList.toggle("collapse");
+    const menu = document.querySelector('#navbar-menu');
+    menu.classList.toggle('collapse');
   });
 
-  let account = document.querySelector("#account");
-  account.addEventListener("click", function (event) {
+  const account = document.querySelector('#account');
+  account.addEventListener('click', (event) => {
     event.preventDefault();
-    let menu = document.querySelector("#dropdown-menu");
-    menu.classList.toggle("active");
+    const menu = document.querySelector('#dropdown-menu');
+    menu.classList.toggle('active');
   });
 });
