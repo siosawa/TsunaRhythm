@@ -4,3 +4,4 @@
 /db/mysql/volumes/
 /tmp/pids/server.pid
 /public/assets/
+/node_modules/
