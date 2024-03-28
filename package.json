@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint app.js",
+    "fix": "eslint --fix app.js",
+    "format": "prettier --write app.js",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
