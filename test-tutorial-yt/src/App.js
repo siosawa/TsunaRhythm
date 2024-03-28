@@ -1,8 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import { Col, Row } from "react-bootstrap";
 import Login from "./Login";
- 
+
 function App() {
   return (
     <div className="Container app-container" role="parent">
@@ -10,7 +10,7 @@ function App() {
       <Row>
         <Col>
           <h1>Reactでチュートリアル</h1>
-        </Col> 
+        </Col>
       </Row>
       <Row>
         <Col>

@@ -12,7 +12,7 @@ Metrics/PerceivedComplexity:
 # models/relationship.rbでのpresence: true検証を除外。
 Rails/RedundantPresenceValidationOnBelongsTo:
   Exclude:
-    - 'app/models/relationship.rb'
+    - "app/models/relationship.rb"
   # models/relationship.rbでpresence: true検証を除外するとrubocopをパスするが、
   # 今度はrelationship_specのfollowerd_idが存在しない時のテストと、follower_idが存在しない時の
   # テストが失敗する。バリデーションを行うタイミングが変わるから・・・？

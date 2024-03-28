@@ -104,11 +104,11 @@ ja:
         success: "フォローを解除しました"
 
   password_resets:
-    check_expriration: 
+    check_expriration:
       flash:
         disabled: "パスワードのリセットの有効期限が切れました"
     create:
-      flash: 
+      flash:
         success: "パスワードのリセット手順が記載されたメールが送信されました"
         danger: "Eメールアドレスが見つかりませんでした"
     update:

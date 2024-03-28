@@ -21,7 +21,7 @@ const Login = () => {
 
   return (
     <>
-    {/* onSubmit(送信ボタンを押した時、handleSubmitの関数が呼び出される) */}
+      {/* onSubmit(送信ボタンを押した時、handleSubmitの関数が呼び出される) */}
       <Form onSubmit={handleSubmit} noValidate>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>メールアドレス</Form.Label>
@@ -36,7 +36,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>パスワード</Form.Label>
           <Form.Control
-            type="password" 
+            type="password"
             placeholder="パスワード入力"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

@@ -64,7 +64,6 @@ RSpec/ExampleLength:
     - "spec/requests/sessions_spec.rb"
     - "spec/requests/microposts_spec.rb"
 
-
 # テスト文言は日本語とするため除外
 RSpec/ContextWording:
   Exclude:
