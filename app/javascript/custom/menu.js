@@ -1,5 +1,3 @@
-// メニュー操作
-
 // トグルリスナーを追加してクリックをリッスンする
 document.addEventListener('turbo:load', () => {
   const hamburger = document.querySelector('#hamburger');
